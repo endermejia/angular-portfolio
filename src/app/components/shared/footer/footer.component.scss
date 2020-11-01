@@ -1,0 +1,19 @@
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #eee;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer-icons {
+  font-size: 1.5em;
+  color: red;
+}
+
+.footer-icon {
+  margin: 1em;
+}
