@@ -1,1 +1,62 @@
-<p>contact works!</p>
+<section id="welcome-section"
+         class="main-section">
+  <article>
+    <app-reach-me></app-reach-me>
+    <div>
+      <h2>Contact form</h2>
+      <form
+        action="https://formspree.io/f/moqrrrer"
+        method="POST">
+        <div class="form-row">
+          <div class="form-group col-lg-6">
+            <label for="inputName">Name</label>
+            <input
+              id="inputName"
+              class="form-control"
+              type="name"
+              name="Name"
+              placeholder="Insert your name"
+              required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-lg-6">
+            <label for="inputEmail">Email</label>
+            <input
+              id="inputEmail"
+              class="form-control"
+              type="email"
+              name="Email"
+              placeholder="Insert your email"
+              required>
+          </div>
+          <div class="form-group col-lg-6">
+            <label for="inputTelephone">Telephone</label>
+            <input
+              id="inputTelephone"
+              class="form-control"
+              type="tel"
+              name="Telephone"
+              placeholder="Insert your telephone"
+              required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="messageTextArea">Message</label>
+          <textarea
+            id="messageTextArea"
+            class="form-control"
+            rows="3"
+            name="Message"
+            placeholder="Write your message"
+            required></textarea>
+        </div>
+        <button
+          type="submit"
+          class="btn btn-primary mb-2">
+          Send
+        </button>
+      </form>
+    </div>
+  </article>
+</section>

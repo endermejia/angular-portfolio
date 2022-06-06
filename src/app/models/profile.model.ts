@@ -8,18 +8,6 @@ export interface ProfileModel {
     show: boolean;
     paragraphs: string[];
   };
-  contact?: {
-    title: string;
-    show: boolean;
-    email?: string;
-    phone?: string;
-    linkedin?: string;
-    github?: string;
-    instagram?: string;
-    linkedinImage?: string;
-    githubImage?: string;
-    instagramImage?: string;
-  }
   skills?: {
     title: string;
     show: boolean;

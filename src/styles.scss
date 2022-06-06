@@ -22,7 +22,7 @@
 
 .main-section {
   padding: 1em 2em;
-  margin-bottom: 2em;
+  margin-bottom: 3em;
 }
 
 #welcome-section {
@@ -119,13 +119,12 @@
     @media (max-width: 768px) {
       text-align: -webkit-center;
     }
-
   }
 }
 
 a {
   text-decoration: none;
-  color: #2c87f0;
+  color: #007bff;
 }
 
 p {
@@ -141,5 +140,11 @@ p {
     @media (max-width: 768px) {
       width: -webkit-fill-available;
     }
+  }
+}
+
+#lifestyleImage {
+  img {
+    width: 100%
   }
 }

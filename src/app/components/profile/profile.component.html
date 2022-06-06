@@ -8,20 +8,7 @@
       </p>
       <hr>
     </div>
-    <div *ngIf="profile.contact.show">
-      <h2>{{profile.contact.title}}</h2>
-      <a href="{{profile.contact.linkedin}}" target="_blank">
-        <img src="{{profile.contact.linkedinImage}}" alt="linkedinImage" class="m-1">
-      </a>
-      <a href="{{profile.contact.github}}" target="_blank">
-        <img src="{{profile.contact.githubImage}}" alt="githubImage" class="m-1">
-      </a>
-      <a href="{{profile.contact.instagram}}" target="_blank">
-        <img src="{{profile.contact.instagramImage}}" alt="instagramImage" class="m-1">
-      </a>
-      <hr>
-
-    </div>
+    <app-reach-me></app-reach-me>
     <div *ngIf="profile.skills.show">
       <h2>{{profile.skills.title}}</h2>
       <ng-container *ngFor="let skill of profile.skills.list">
@@ -40,9 +27,7 @@
       <hr>
     </div>
     <div id="profile-img">
-      <a id="profile-link" href="{{profile.contact.linkedin}}" target="_blank">
-        <img src="assets/PerfilLinkedin.jpg">
-      </a>
+      <img id="profile-link" src="../../../assets/profilePhoto.jpg">
     </div>
   </article>
 </section>

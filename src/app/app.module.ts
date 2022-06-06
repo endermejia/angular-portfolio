@@ -12,6 +12,7 @@ import {PageNotFoundComponent} from './components/page-not-found/page-not-found.
 import {ProfileComponent} from './components/profile/profile.component';
 import {LifestyleComponent} from './components/lifestyle/lifestyle.component';
 import {ContactComponent} from './components/contact/contact.component';
+import { ReachMeComponent } from './components/shared/reach-me/reach-me.component';
 
 registerLocaleData(localeEs);
 
@@ -23,7 +24,8 @@ registerLocaleData(localeEs);
     PageNotFoundComponent,
     ProfileComponent,
     LifestyleComponent,
-    ContactComponent
+    ContactComponent,
+    ReachMeComponent
   ],
   imports: [
     BrowserModule,

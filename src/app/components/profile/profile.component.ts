@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ProfileModel} from "../../models/profile.model";
+import {ProfileModel} from '../../models/profile.model';
 
 @Component({
   selector: 'app-profile',
@@ -22,18 +22,6 @@ export class ProfileComponent implements OnInit {
         '🧠 I’m currently learning Kotlin and perfecting my frontend skills with Angular framework'
       ]
     },
-    contact: {
-      title: '📫 How to reach me',
-      show: true,
-      email: 'endermejia032@gmail.com',
-      phone: '+57 300 888 8888',
-      linkedin: 'https://www.linkedin.com/in/endermejia/',
-      github: 'https://github.com/endermejia',
-      instagram: 'https://www.instagram.com/gabri.mejia/',
-      linkedinImage: 'https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white',
-      githubImage: 'https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white',
-      instagramImage: 'https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white'
-    },
     skills: {
       title: '✨ Skills',
       show: true,
@@ -54,7 +42,6 @@ export class ProfileComponent implements OnInit {
       gitHubStats: 'https://github-readme-stats.vercel.app/api?username=endermejia&show_icons=true&include_all_commits=true&hide=contribs,prs',
       gitHubLangs: 'https://github-readme-stats.vercel.app/api/top-langs/?username=endermejia&layout=compact'
     }
-
   };
 
   constructor() {
