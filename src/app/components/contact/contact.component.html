@@ -2,60 +2,62 @@
          class="main-section">
   <article>
     <app-reach-me></app-reach-me>
-    <div>
-      <h2>Contact form</h2>
+    <div *ngIf="contactForm.show">
+      <h2>{{contactForm.title}}</h2>
       <form
-        action="https://formspree.io/f/moqrrrer"
+        action="{{contactForm.formspree}}"
         method="POST">
-        <div class="form-row">
-          <div class="form-group col-lg-6">
-            <label for="inputName">Name</label>
-            <input
-              id="inputName"
-              class="form-control"
-              type="name"
-              name="Name"
-              placeholder="Insert your name"
-              required>
+        <fieldset>
+          <div class="form-row">
+            <div class="form-group col-lg-6">
+              <label for="inputName">{{contactForm.name}}</label>
+              <input
+                id="inputName"
+                class="form-control"
+                type="name"
+                name="{{contactForm.name}}"
+                placeholder="{{contactForm.namePlaceholder}}"
+                required>
+            </div>
           </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group col-lg-6">
-            <label for="inputEmail">Email</label>
-            <input
-              id="inputEmail"
-              class="form-control"
-              type="email"
-              name="Email"
-              placeholder="Insert your email"
-              required>
+          <div class="form-row">
+            <div class="form-group col-lg-6">
+              <label for="inputEmail">{{contactForm.email}}</label>
+              <input
+                id="inputEmail"
+                class="form-control"
+                type="email"
+                name="{{contactForm.email}}"
+                placeholder="{{contactForm.emailPlaceholder}}"
+                required>
+            </div>
+            <div class="form-group col-lg-6">
+              <label for="inputTelephone">{{contactForm.phone}}</label>
+              <input
+                id="inputTelephone"
+                class="form-control"
+                type="tel"
+                name="{{contactForm.phone}}"
+                placeholder="{{contactForm.phonePlaceholder}}"
+                required>
+            </div>
           </div>
-          <div class="form-group col-lg-6">
-            <label for="inputTelephone">Telephone</label>
-            <input
-              id="inputTelephone"
+          <div class="form-group">
+            <label for="messageTextArea">{{contactForm.message}}</label>
+            <textarea
+              id="messageTextArea"
               class="form-control"
-              type="tel"
-              name="Telephone"
-              placeholder="Insert your telephone"
-              required>
+              rows="3"
+              name="{{contactForm.message}}"
+              placeholder="{{contactForm.messagePlaceholder}}"
+              required></textarea>
           </div>
-        </div>
-        <div class="form-group">
-          <label for="messageTextArea">Message</label>
-          <textarea
-            id="messageTextArea"
-            class="form-control"
-            rows="3"
-            name="Message"
-            placeholder="Write your message"
-            required></textarea>
-        </div>
-        <button
-          type="submit"
-          class="btn btn-primary mb-2">
-          Send
-        </button>
+          <button
+            type="submit"
+            class="btn btn-primary mb-2">
+            {{contactForm.sendButton}}
+          </button>
+        </fieldset>
       </form>
     </div>
   </article>

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ContactFormModel} from "../../models/contact-form.model";
 
 @Component({
   selector: 'app-contact',
@@ -7,7 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  public contactForm: ContactFormModel = {
+    title: 'Contact me',
+    show: true,
+    formspree: 'https://formspree.io/f/moqrrrer',
+    name: 'Name',
+    namePlaceholder: 'Insert your name',
+    email: 'Email',
+    emailPlaceholder: 'Insert your email',
+    phone: 'Phone',
+    phonePlaceholder: 'Insert your phone number',
+    message: 'Message',
+    messagePlaceholder: 'Write your message',
+    sendButton: 'Send'
+  }
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
