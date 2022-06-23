@@ -16,16 +16,7 @@
       </ng-container>
       <hr>
     </div>
-    <div id="githubActivity" *ngIf="profile.gitHubActivity.show">
-      <h2>{{profile.gitHubActivity.title}}</h2>
-      <div>
-        <img src="{{profile.gitHubActivity.gitHubStats}}" class="m-1">
-      </div>
-      <div>
-        <img src="{{profile.gitHubActivity.gitHubLangs}}" class="m-1">
-      </div>
-      <hr>
-    </div>
+    <app-github-activity></app-github-activity>
     <div id="profile-img">
       <img id="profile-link" src="../../../assets/profilePhoto.jpg">
     </div>

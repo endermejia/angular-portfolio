@@ -143,6 +143,19 @@ p {
   }
 }
 
+#githubRepos {
+  div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  img {
+    @media (max-width: 768px) {
+      width: -webkit-fill-available;
+    }
+  }
+}
+
 #lifestyleImage {
   img {
     width: 100%

@@ -13,6 +13,8 @@ import {ProfileComponent} from './components/profile/profile.component';
 import {LifestyleComponent} from './components/lifestyle/lifestyle.component';
 import {ContactComponent} from './components/contact/contact.component';
 import { ReachMeComponent } from './components/shared/reach-me/reach-me.component';
+import { GithubActivityComponent } from './components/shared/github-activity/github-activity.component';
+import { GithubReposComponent } from './components/shared/github-repos/github-repos.component';
 
 registerLocaleData(localeEs);
 
@@ -25,7 +27,9 @@ registerLocaleData(localeEs);
     ProfileComponent,
     LifestyleComponent,
     ContactComponent,
-    ReachMeComponent
+    ReachMeComponent,
+    GithubActivityComponent,
+    GithubReposComponent
   ],
   imports: [
     BrowserModule,
