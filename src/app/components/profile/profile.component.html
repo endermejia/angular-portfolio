@@ -3,8 +3,8 @@
   <article>
     <div *ngIf="profile.description.show">
       <h2>{{profile.description.title}}</h2>
-      <p *ngFor="let parahraph of profile.description.paragraphs">
-        {{parahraph}}
+      <p *ngFor="let paragraph of profile.description.paragraphs">
+        {{paragraph}}
       </p>
       <hr>
     </div>
@@ -12,7 +12,9 @@
     <div *ngIf="profile.skills.show">
       <h2>{{profile.skills.title}}</h2>
       <ng-container *ngFor="let skill of profile.skills.list">
-        <img src="{{skill}}" class="m-1">
+        <img [src]="skill"
+             class="m-1"
+             [alt]="skill">
       </ng-container>
       <hr>
     </div>

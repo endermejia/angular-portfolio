@@ -2,7 +2,13 @@
   <h2>{{githubRepos.title}}</h2>
   <div>
     <ng-container *ngFor="let githubRepo of githubRepos.repos">
-      <img src="{{githubRepo}}" class="m-1">
+      <a [href]="githubRepos.baseUrlRepo + githubRepo"
+         class="img-fluid"
+         target="_blank">
+        <img [src]="githubRepos.baseUrlImage + githubRepo"
+             [alt]="githubRepo"
+             class="m-1">
+      </a>
     </ng-container>
   </div>
   <hr>

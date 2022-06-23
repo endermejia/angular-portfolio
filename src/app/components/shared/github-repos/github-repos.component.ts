@@ -11,11 +11,13 @@ export class GithubReposComponent implements OnInit {
   public githubRepos: GithubReposModel = {
     title: '🔥 My repositories',
     show: true,
+    baseUrlImage: 'https://github-readme-stats.vercel.app/api/pin/?username=endermejia&repo=',
+    baseUrlRepo: 'https://github.com/endermejia/',
     repos: [
-      'https://github-readme-stats.vercel.app/api/pin/?username=endermejia&repo=frontendCV',
-      'https://github-readme-stats.vercel.app/api/pin/?username=endermejia&repo=clubescaladacostablanca',
-      'https://github-readme-stats.vercel.app/api/pin/?username=endermejia&repo=ctrlThings',
-      'https://github-readme-stats.vercel.app/api/pin/?username=endermejia&repo=nobelApp'
+      'frontendCV',
+      'ctrlThings',
+      'clubescaladacostablanca',
+      'nobelApp'
     ]
   }
 
