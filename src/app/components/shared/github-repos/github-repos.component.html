@@ -1,1 +1,9 @@
-<p>github-repos works!</p>
+<div id="githubRepos" *ngIf="githubRepos.show">
+  <h2>{{githubRepos.title}}</h2>
+  <div>
+    <ng-container *ngFor="let githubRepo of githubRepos.repos">
+      <img src="{{githubRepo}}" class="m-1">
+    </ng-container>
+  </div>
+  <hr>
+</div>
