@@ -13,10 +13,4 @@ export interface ProfileModel {
     show: boolean;
     list: string[];
   };
-  gitHubActivity?: {
-    title: string;
-    show: boolean;
-    gitHubStats: string;
-    gitHubLangs: string;
-  };
 }
