@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {GithubReposModel} from "../../../models/github-repos.model";
+import {GithubReposModel} from '../../../models/github-repos.model';
 
 @Component({
   selector: 'app-github-repos',
