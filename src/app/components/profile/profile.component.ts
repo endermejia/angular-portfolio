@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ProfileModel} from '../../models/profile.model';
+import {PROFILE} from '../../mocks/global-info';
 
 @Component({
   selector: 'app-profile',
@@ -8,21 +9,7 @@ import {ProfileModel} from '../../models/profile.model';
 })
 export class ProfileComponent implements OnInit {
 
-  public profile: ProfileModel = {
-    name: 'gabrielMejia()',
-    firstName: 'Gabriel',
-    lastName: 'Mejia',
-    position: 'Frontend Developer',
-    description: {
-      title: 'Frontend Developer 🐱‍👤',
-      show: true,
-      paragraphs: [
-        '👋 Hi, I’m Gabriel Mejía Melgarejo',
-        '💖 I’m a fanatic climber and a motivated programmer',
-        '🧠 I’m currently learning Kotlin and perfecting my frontend skills with Angular framework'
-      ]
-    }
-  };
+  public profile: ProfileModel = PROFILE
 
   constructor() {
   }

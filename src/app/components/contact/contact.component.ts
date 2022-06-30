@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ContactFormModel} from '../../models/contact-form.model';
+import {CONTACT_FORM} from '../../mocks/global-info';
 
 @Component({
   selector: 'app-contact',
@@ -8,20 +9,7 @@ import {ContactFormModel} from '../../models/contact-form.model';
 })
 export class ContactComponent implements OnInit {
 
-  public contactForm: ContactFormModel = {
-    title: 'Contact me',
-    show: true,
-    formspree: 'https://formspree.io/f/moqrrrer',
-    name: 'Name',
-    namePlaceholder: 'Insert your name',
-    email: 'Email',
-    emailPlaceholder: 'Insert your email',
-    phone: 'Phone',
-    phonePlaceholder: 'Insert your phone number',
-    message: 'Message',
-    messagePlaceholder: 'Write your message',
-    sendButton: 'Send'
-  }
+  public contactForm: ContactFormModel = CONTACT_FORM;
 
   constructor() {
   }

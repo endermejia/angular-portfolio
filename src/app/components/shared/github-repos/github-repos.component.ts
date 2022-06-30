@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {GithubReposModel} from '../../../models/github-repos.model';
+import {GITHUB_REPOS} from '../../../mocks/global-info';
 
 @Component({
   selector: 'app-github-repos',
@@ -8,18 +9,7 @@ import {GithubReposModel} from '../../../models/github-repos.model';
 })
 export class GithubReposComponent implements OnInit {
 
-  public githubRepos: GithubReposModel = {
-    title: '🔥 My repositories',
-    show: true,
-    baseUrlImage: 'https://github-readme-stats.vercel.app/api/pin/?username=endermejia&repo=',
-    baseUrlRepo: 'https://github.com/endermejia/',
-    repos: [
-      'frontendCV',
-      'ctrlThings',
-      'clubescaladacostablanca',
-      'nobelApp'
-    ]
-  }
+  public githubRepos: GithubReposModel = GITHUB_REPOS
 
   constructor() {
   }
