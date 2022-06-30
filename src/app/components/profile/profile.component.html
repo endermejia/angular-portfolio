@@ -9,15 +9,7 @@
       <hr>
     </div>
     <app-reach-me></app-reach-me>
-    <div *ngIf="profile.skills.show">
-      <h2>{{profile.skills.title}}</h2>
-      <ng-container *ngFor="let skill of profile.skills.list">
-        <img [src]="skill"
-             class="m-1"
-             [alt]="skill">
-      </ng-container>
-      <hr>
-    </div>
+    <app-skills></app-skills>
     <app-github-activity></app-github-activity>
     <div id="profile-img">
       <img id="profile-link" src="../../../assets/profilePhoto.jpg">

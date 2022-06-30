@@ -8,9 +8,4 @@ export interface ProfileModel {
     show: boolean;
     paragraphs: string[];
   };
-  skills?: {
-    title: string;
-    show: boolean;
-    list: string[];
-  };
 }

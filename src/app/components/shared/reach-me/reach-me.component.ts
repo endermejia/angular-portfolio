@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ContactModel} from "../../../models/contact.model";
+import {ContactModel} from '../../../models/contact.model';
 
 @Component({
   selector: 'app-reach-me',
