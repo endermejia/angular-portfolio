@@ -1,0 +1,9 @@
+<div *ngIf="skills.show">
+  <h2>{{skills.title}}</h2>
+  <ng-container *ngFor="let skill of skills.list">
+    <img [src]="skill"
+         class="m-1"
+         [alt]="skill">
+  </ng-container>
+  <hr>
+</div>
