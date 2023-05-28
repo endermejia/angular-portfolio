@@ -1,10 +1,5 @@
 .footer {
-  //position: sticky;
-  position: fixed;
-  left: 0;
-  bottom: 0;
   width: 100%;
-  background-color: #eee;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -15,5 +10,6 @@
 }
 
 .footer-icon {
+  color: white;
   margin: 1em;
 }

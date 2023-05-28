@@ -21,15 +21,8 @@
 }
 
 .main-section {
-  padding: 1em 2em;
+  padding: 2em;
   margin-bottom: 3em;
-}
-
-#welcome-section {
-  // height: 100vh;
-  background: linear-gradient(#eee, rgba(238, 238, 238, 1), rgba(238, 238, 238, .5)), url("assets/background.jpg"); // #eee === rgba(238,238,238,1) === myBackgroundColor
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
 }
 
 #profile-img {

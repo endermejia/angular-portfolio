@@ -1,18 +1,20 @@
-<section id="welcome-section"
-         class="main-section">
+<section class="main-section">
   <article>
-    <div *ngIf="profile.description.show">
-      <h2>{{profile.description.title}}</h2>
-      <p *ngFor="let paragraph of profile.description.paragraphs">
-        {{paragraph}}
-      </p>
+    <div>
+      <div *ngIf="profile.description.show">
+        <h1><b>{{profile.description.title}}</b></h1>
+        <p *ngFor="let paragraph of profile.description.paragraphs"
+           [style.font-size.em]="1.2"
+           [innerHTML]="paragraph">
+        </p>
+      </div>
+      <div id="profile-img">
+        <img id="profile-link" src="../../../assets/profilePhoto.jpg">
+      </div>
       <hr>
     </div>
     <app-reach-me></app-reach-me>
     <app-skills></app-skills>
     <app-github-activity></app-github-activity>
-    <div id="profile-img">
-      <img id="profile-link" src="../../../assets/profilePhoto.jpg">
-    </div>
   </article>
 </section>

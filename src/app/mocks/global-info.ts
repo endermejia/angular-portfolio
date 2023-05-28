@@ -6,23 +6,20 @@ import {GithubReposModel} from '../models/github-repos.model';
 import {SkillsModel} from '../models/skills.model';
 
 export const PROFILE: ProfileModel = {
-  name: 'gabrielMejia()',
-  firstName: 'Gabriel',
-  lastName: 'Mejia',
-  position: 'Frontend Developer',
+  name: 'gabrielMejia();',
   description: {
-    title: 'Frontend Developer 🐱‍👤',
+    title: 'Gabriel Mejía',
     show: true,
     paragraphs: [
-      '👋 Hi, I’m Gabriel Mejía Melgarejo',
-      '💖 I’m a fanatic climber and a motivated programmer',
-      '🧠 I’m currently learning Kotlin and perfecting my frontend skills with Angular framework'
+      'Senior FrontEnd Deveoper at <a href="https://www.ricoh.es/" target="_blank">RICOH</a>.',
+      'I’m a passionate climber and a good and motivated programmer.',
+      'I’m a Frontend Developer with more than 3 years of experience in Angular and Typescript.',
     ]
   }
 };
 
 export const CONTACT: ContactModel = {
-  title: '📫 How to reach me',
+  title: 'How to reach me',
   show: true,
   email: 'endermejia032@gmail.com',
   phone: '639517895',
@@ -50,14 +47,14 @@ export const CONTACT_FORM: ContactFormModel = {
 };
 
 export const GITHUB_ACTIVITY: GithubActivityModel = {
-  title: '☕ Activity',
+  title: 'Activity',
   show: true,
   gitHubStats: 'https://github-readme-stats.vercel.app/api?username=endermejia&show_icons=true&include_all_commits=true&hide=prs,contribs',
   gitHubLangs: 'https://github-readme-stats.vercel.app/api/top-langs/?username=endermejia&layout=compact'
 };
 
 export const GITHUB_REPOS: GithubReposModel = {
-  title: '🔥 My repositories',
+  title: 'My repositories',
   show: true,
   baseUrlImage: 'https://github-readme-stats.vercel.app/api/pin/?username=endermejia&repo=',
   baseUrlRepo: 'https://github.com/endermejia/',
@@ -70,7 +67,7 @@ export const GITHUB_REPOS: GithubReposModel = {
 };
 
 export const SKILLS: SkillsModel = {
-  title: '✨ Skills',
+  title: 'Skills',
   show: true,
   list: [
     'https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white',

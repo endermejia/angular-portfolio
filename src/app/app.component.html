@@ -1,7 +1,11 @@
-<app-navbar></app-navbar>
-
-<div class="container">
-  <router-outlet></router-outlet>
+<div [style.display]="'flex'" [style.flex-direction]="'column'">
+  <header>
+    <app-navbar></app-navbar>
+  </header>
+  <section class="container">
+    <router-outlet></router-outlet>
+  </section>
+  <footer>
+    <app-footer></app-footer>
+  </footer>
 </div>
-
-<app-footer></app-footer>

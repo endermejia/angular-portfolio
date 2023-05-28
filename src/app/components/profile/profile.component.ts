@@ -9,7 +9,7 @@ import {PROFILE} from '../../mocks/global-info';
 })
 export class ProfileComponent implements OnInit {
 
-  public profile: ProfileModel = PROFILE
+  public profile: ProfileModel = PROFILE;
 
   constructor() {
   }
