@@ -1,5 +1,7 @@
+import {ItemModel} from './item.model';
+
 export interface SkillsModel {
-  title: string;
+  items: ItemModel[];
   show: boolean;
-  list: string[];
+  title: string;
 }

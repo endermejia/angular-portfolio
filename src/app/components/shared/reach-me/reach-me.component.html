@@ -1,13 +1,12 @@
 <div *ngIf="contact.show">
   <h2>{{contact.title}}</h2>
-  <a [href]="contact.linkedin" target="_blank">
-    <img [src]="contact.linkedinImage" alt="linkedinImage" class="m-1">
-  </a>
-  <a [href]="contact.github" target="_blank">
-    <img [src]="contact.githubImage" alt="githubImage" class="m-1">
-  </a>
-  <a [href]="contact.instagram" target="_blank">
-    <img [src]="contact.instagramImage" alt="instagramImage" class="m-1">
-  </a>
+  <ul>
+    <li *ngFor="let item of contact.items">
+        <a [href]="item.link" target="_blank" [style.font-size.em]="1.2">
+          <i class="fa fa-{{item.icon}}"></i>
+          {{item.name}}
+        </a>
+    </li>
+  </ul>
   <hr>
 </div>

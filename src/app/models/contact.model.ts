@@ -1,12 +1,9 @@
+import {ItemModel} from './item.model';
+
 export interface ContactModel {
-  title: string;
-  show: boolean;
   email?: string;
+  items: ItemModel[];
   phone?: string;
-  linkedin?: string;
-  github?: string;
-  instagram?: string;
-  linkedinImage?: string;
-  githubImage?: string;
-  instagramImage?: string;
+  show: boolean;
+  title: string;
 }

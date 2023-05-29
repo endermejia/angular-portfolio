@@ -1,6 +1,6 @@
 export interface GithubActivityModel {
-  title: string;
-  show: boolean;
-  gitHubStats: string;
   gitHubLangs: string;
+  gitHubStats: string;
+  show: boolean;
+  title: string;
 }

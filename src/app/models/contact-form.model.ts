@@ -1,14 +1,14 @@
 export interface ContactFormModel {
-  title: string;
-  show: boolean;
-  formspree: string;
-  name: string;
-  namePlaceholder: string;
   email: string;
   emailPlaceholder: string;
-  phone: string;
-  phonePlaceholder: string;
+  formspree: string;
   message: string;
   messagePlaceholder: string;
+  name: string;
+  namePlaceholder: string;
+  phone: string;
+  phonePlaceholder: string;
   sendButton: string;
+  show: boolean;
+  title: string;
 }

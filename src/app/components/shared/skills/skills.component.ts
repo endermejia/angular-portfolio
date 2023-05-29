@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {SkillsModel} from '../../../models/skills.model';
-import {SKILLS} from '../../../mocks/global-info';
+import {CONTACT, SKILLS} from '../../../mocks/global-info';
 
 @Component({
   selector: 'app-skills',
@@ -17,4 +17,5 @@ export class SkillsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  protected readonly CONTACT = CONTACT;
 }

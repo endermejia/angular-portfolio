@@ -23,12 +23,11 @@ export const CONTACT: ContactModel = {
   show: true,
   email: 'endermejia032@gmail.com',
   phone: '639517895',
-  linkedin: 'https://www.linkedin.com/in/endermejia/',
-  github: 'https://github.com/endermejia',
-  instagram: 'https://www.instagram.com/gabri.mejia/',
-  linkedinImage: 'https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white',
-  githubImage: 'https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white',
-  instagramImage: 'https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white'
+  items: [
+    {name: 'LinkedIn', link: 'https://www.linkedin.com/in/endermejia/', icon: 'linkedin'},
+    {name: 'GitHub', link: 'https://github.com/endermejia', icon: 'github'},
+    {name: 'Instagram', link: 'https://www.instagram.com/gabri.mejia/', icon: 'instagram'},
+  ]
 };
 
 export const CONTACT_FORM: ContactFormModel = {
@@ -69,14 +68,15 @@ export const GITHUB_REPOS: GithubReposModel = {
 export const SKILLS: SkillsModel = {
   title: 'Skills',
   show: true,
-  list: [
-    'https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white',
-    'https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white',
-    'https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E',
-    'https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white',
-    'https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white',
-    'https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white',
-    'https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white',
-    'https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white'
+  items: [
+    {name: 'Angular'},
+    {name: 'Typescript'},
+    {name: 'Javascript'},
+    {name: 'HTML5'},
+    {name: 'CSS3'},
+    {name: 'SASS'},
+    {name: 'Bootstrap'},
+    {name: 'Material'},
+    {name: 'Git'},
   ]
 };
