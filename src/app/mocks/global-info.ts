@@ -1,82 +1,44 @@
 import {ProfileModel} from '../models/profile.model';
 import {ContactModel} from '../models/contact.model';
 import {ContactFormModel} from '../models/contact-form.model';
-import {GithubActivityModel} from '../models/github-activity.model';
-import {GithubReposModel} from '../models/github-repos.model';
-import {SkillsModel} from '../models/skills.model';
 
 export const PROFILE: ProfileModel = {
-  name: 'gabrielMejia();',
-  description: {
-    title: 'Gabriel Mejía',
-    show: true,
-    paragraphs: [
-      'Senior FrontEnd Deveoper at <a href="https://www.ricoh.es/" target="_blank">RICOH</a>.',
-      'I’m a passionate climber and a good and motivated programmer.',
-      'I’m a Frontend Developer with more than 3 years of experience in Angular and Typescript.',
-    ]
-  }
+	name: 'Robotkid',
+	description: {
+		title: 'Products',
+		show: true,
+		paragraphs: [
+			// Musician mercha products
+			'Robotkid is a musician and producer from Barcelona, Spain. He has been making music since 1998, and has released 4 albums and 2 EPs. He has also collaborated with other artists, and has produced music for other artists and companies.',
+			'Robotkid has also created a series of products related to his music, such as t-shirts, posters, stickers, and other merchandising products. These products are available in his online store, and are shipped worldwide.',
+
+
+		]
+	}
 };
 
 export const CONTACT: ContactModel = {
-  title: 'How to reach me',
-  show: true,
-  email: 'endermejia032@gmail.com',
-  phone: '639517895',
-  items: [
-    {name: 'LinkedIn', link: 'https://www.linkedin.com/in/endermejia/', icon: 'linkedin'},
-    {name: 'GitHub', link: 'https://github.com/endermejia', icon: 'github'},
-    {name: 'Instagram', link: 'https://www.instagram.com/gabri.mejia/', icon: 'instagram'},
-  ]
+	title: 'How to reach me',
+	show: true,
+	email: 'robotkid@gmail.com',
+	phone: '666 666 666',
+	items: [
+		{name: 'Twitter', link: 'https://twitter.com/robotkid', icon: 'twitter'},
+		{name: 'Instagram', link: 'https://www.instagram.com/robotkid/', icon: 'instagram'},
+	]
 };
 
 export const CONTACT_FORM: ContactFormModel = {
-  title: 'Contact me',
-  show: true,
-  formspree: 'https://formspree.io/f/moqrrrer',
-  name: 'Name',
-  namePlaceholder: 'Insert your name',
-  email: 'Email',
-  emailPlaceholder: 'Insert your email',
-  phone: 'Phone',
-  phonePlaceholder: 'Insert your phone number',
-  message: 'Message',
-  messagePlaceholder: 'Write your message',
-  sendButton: 'Send'
-};
-
-export const GITHUB_ACTIVITY: GithubActivityModel = {
-  title: 'Activity',
-  show: true,
-  gitHubStats: 'https://github-readme-stats.vercel.app/api?username=endermejia&show_icons=true&include_all_commits=true&hide=prs,contribs',
-  gitHubLangs: 'https://github-readme-stats.vercel.app/api/top-langs/?username=endermejia&layout=compact'
-};
-
-export const GITHUB_REPOS: GithubReposModel = {
-  title: 'My repositories',
-  show: true,
-  baseUrlImage: 'https://github-readme-stats.vercel.app/api/pin/?username=endermejia&repo=',
-  baseUrlRepo: 'https://github.com/endermejia/',
-  repos: [
-    'frontendCV',
-    'ctrlThings',
-    'clubescaladacostablanca',
-    'nobelApp'
-  ]
-};
-
-export const SKILLS: SkillsModel = {
-  title: 'Skills',
-  show: true,
-  items: [
-    {name: 'Angular'},
-    {name: 'Typescript'},
-    {name: 'Javascript'},
-    {name: 'HTML5'},
-    {name: 'CSS3'},
-    {name: 'SASS'},
-    {name: 'Bootstrap'},
-    {name: 'Material'},
-    {name: 'Git'},
-  ]
+	title: 'Contact me',
+	show: true,
+	formspree: 'https://formspree.io/f/moqrrrer',
+	name: 'Name',
+	namePlaceholder: '',
+	email: 'Email',
+	emailPlaceholder: '',
+	phone: 'Phone',
+	phonePlaceholder: '',
+	message: 'Message',
+	messagePlaceholder: '',
+	sendButton: 'Send'
 };

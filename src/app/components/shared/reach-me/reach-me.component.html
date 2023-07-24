@@ -1,12 +1,18 @@
 <div *ngIf="contact.show">
-  <h2>{{contact.title}}</h2>
-  <ul>
-    <li *ngFor="let item of contact.items">
-        <a [href]="item.link" target="_blank" [style.font-size.em]="1.2">
-          <i class="fa fa-{{item.icon}}"></i>
-          {{item.name}}
-        </a>
-    </li>
-  </ul>
-  <hr>
+	<h2>{{contact.title}}</h2>
+	<p>
+        You can contact me by email at <a href="mailto:{{contact.email}}">{{contact.email}}</a> or by phone at <a href="tel:{{contact.phone}}">{{contact.phone}}</a>.
+	</p>
+	<p>
+		You can also find me on the following social networks:
+	</p>
+	<ul>
+		<li *ngFor="let item of contact.items">
+			<a [href]="item.link" target="_blank">
+				<i class="fa fa-{{item.icon}}"></i>
+				{{item.name}}
+			</a>
+		</li>
+	</ul>
+	<hr>
 </div>

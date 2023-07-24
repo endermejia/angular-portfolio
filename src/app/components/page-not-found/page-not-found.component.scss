@@ -31,14 +31,12 @@
 .container {
   font-family: "Roboto Mono", "Liberation Mono", Consolas, monospace;
   color: #343a40;
-
-  background-image: url("src/assets/404.gif");
   background-size: cover;
   background-position: center;
-  height: 720px;
   align-content: center;
   text-align: center;
-  //padding: 0;
+  width: 100%;
+
 
   row {
     display: flex;
