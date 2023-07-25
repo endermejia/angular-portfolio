@@ -1,0 +1,30 @@
+<section class="main-section">
+  <article>
+    <div>
+      <div *ngIf="profile.description.show">
+        <h1 class="text-danger">{{profile.description.title}}</h1>
+        <p *ngFor="let paragraph of profile.description.paragraphs"
+           [innerHTML]="paragraph">
+        </p>
+      </div>
+
+      <!-- Grid cards de productos con imagen, link y nombre -->
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-4" *ngFor="let product of products">
+          <div class="mb-4">
+            <h4>{{product.name}}</h4>
+            <a [href]="product.link"
+               target="_blank"
+               rel="noopener noreferrer">
+              <img [src]="product.icon"
+                   [alt]="product.name"
+                   class="img-fluid">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="badge-dark">
+    <app-reach-me></app-reach-me>
+  </article>
+</section>

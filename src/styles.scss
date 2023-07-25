@@ -12,7 +12,6 @@
 
 .main-section {
   padding: 2em;
-  margin-bottom: 3em;
 }
 
 #navbar {
@@ -92,6 +91,10 @@
 a {
   text-decoration: none;
   color: #dc3545;
+
+  &:hover {
+    color: #dc3545;
+  }
 }
 
 p {
@@ -117,4 +120,8 @@ body {
 
 .bg-dark {
   background-color: black !important;
+}
+
+.nav-link.active {
+  color: #dc3545 !important;
 }

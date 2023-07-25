@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from '@angular/core';
 import {ProfileModel} from '../../../models/profile.model';
 import {PROFILE} from '../../../mocks/global-info';
 
@@ -7,13 +7,8 @@ import {PROFILE} from '../../../mocks/global-info';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent {
 
   public profile: ProfileModel = PROFILE;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

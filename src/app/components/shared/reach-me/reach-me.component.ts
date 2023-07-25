@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {ContactModel} from '../../../models/contact.model';
 import {CONTACT} from '../../../mocks/global-info';
 
@@ -7,14 +7,8 @@ import {CONTACT} from '../../../mocks/global-info';
   templateUrl: './reach-me.component.html',
   styleUrls: ['./reach-me.component.scss']
 })
-export class ReachMeComponent implements OnInit {
+export class ReachMeComponent {
 
   public contact: ContactModel = CONTACT;
-
-  constructor() {
-  }
-
-  ngOnInit(): void {
-  }
 
 }

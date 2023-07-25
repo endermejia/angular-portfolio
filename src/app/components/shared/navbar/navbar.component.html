@@ -9,10 +9,9 @@
 					<a class="nav-link" routerLinkActive="active" routerLink="/contact">Contact</a>
 				</li>
 			</div>
-			<img src="assets/robotkid-white.png"
-				 alt="404"
-				 class="img-fluid"
-				 routerLink="">
+			<img [src]="profile.image"
+				 [alt]="profile.name"
+				 class="img-fluid">
 		</div>
 	</div>
 </nav>

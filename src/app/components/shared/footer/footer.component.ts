@@ -4,15 +4,15 @@ import {CONTACT, PROFILE} from '../../../mocks/global-info';
 import {ContactModel} from '../../../models/contact.model';
 
 @Component({
-	selector: 'app-footer',
-	templateUrl: './footer.component.html',
-	styleUrls: ['./footer.component.scss']
+  selector: 'app-footer',
+  templateUrl: './footer.component.html',
+  styleUrls: ['./footer.component.scss']
 })
 
 export class FooterComponent {
 
-	public profile: ProfileModel = PROFILE;
-	public contact: ContactModel = CONTACT;
-	year = new Date().getFullYear();
+  public profile: ProfileModel = PROFILE;
+  public contact: ContactModel = CONTACT;
+  year = new Date().getFullYear();
 
 }

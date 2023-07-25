@@ -10,7 +10,7 @@ import {ContactComponent} from './components/contact/contact.component';
 import {FooterComponent} from './components/shared/footer/footer.component';
 import {NavbarComponent} from './components/shared/navbar/navbar.component';
 import {PageNotFoundComponent} from './components/page-not-found/page-not-found.component';
-import {ProfileComponent} from './components/profile/profile.component';
+import {HomeComponent} from './components/profile/home.component';
 import {ReachMeComponent} from './components/shared/reach-me/reach-me.component';
 
 registerLocaleData(localeEs);
@@ -22,7 +22,7 @@ registerLocaleData(localeEs);
     FooterComponent,
     NavbarComponent,
     PageNotFoundComponent,
-    ProfileComponent,
+    HomeComponent,
     ReachMeComponent,
   ],
   imports: [

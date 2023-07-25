@@ -6,5 +6,6 @@ export interface ProfileDescriptionModel {
 
 export interface ProfileModel {
   description?: ProfileDescriptionModel;
+  image: string;
   name: string;
 }

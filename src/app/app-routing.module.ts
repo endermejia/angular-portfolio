@@ -2,12 +2,12 @@ import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 import {ContactComponent} from './components/contact/contact.component';
 import {PageNotFoundComponent} from './components/page-not-found/page-not-found.component';
-import {ProfileComponent} from './components/profile/profile.component';
+import {HomeComponent} from './components/profile/home.component';
 
 
 const routes: Routes = [
   {
-    path: 'home', component: ProfileComponent
+    path: 'home', component: HomeComponent
   },
   {
     path: 'contact', component: ContactComponent
