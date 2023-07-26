@@ -7,7 +7,7 @@ export const PROFILE: ProfileModel = {
   name: 'Robotkid',
   image: 'assets/robotkid-white.png',
   description: {
-    title: 'Products',
+    title: 'PRODUCTS',
     show: true,
     paragraphs: [
       'Para comprar mis productos, visita mi tienda en Instagram <a href="https://www.instagram.com/car2robotkid/">@car2robotkid</a>',
@@ -17,24 +17,27 @@ export const PROFILE: ProfileModel = {
 
 export const PRODUCTS: ItemModel[] = [
   {
-    name: 'Camiseta Dark Lettering',
+    name: 'CAMISETA DEMON',
     icon: 'assets/camiseta1.jpg',
+    price: '20€',
     link: 'https://www.amazon.es/dp/B08KQJQZQD?ref=myi_title_dp'
   },
   {
-    name: 'Camiseta Robotkid Dark',
+    name: 'CAMISETA ROBOTKID',
     icon: 'assets/camiseta1.jpg',
+    price: '20€',
     link: 'https://www.amazon.es/dp/B08KQJQZQD?ref=myi_title_dp'
   },
   {
-    name: 'Camiseta Dark',
+    name: 'CAMISETA DARK',
     icon: 'assets/camiseta1.jpg',
+    price: '20€',
     link: 'https://www.amazon.es/dp/B08KQJQZQD?ref=myi_title_dp'
   }
 ];
 
 export const CONTACT: ContactModel = {
-  title: 'Contact me',
+  title: 'HOW TO CONTACT ME',
   show: true,
   email: 'robotkid@gmail.com',
   phone: '666 666 666',
@@ -46,16 +49,16 @@ export const CONTACT: ContactModel = {
 };
 
 export const CONTACT_FORM: ContactFormModel = {
-  title: 'Contact me',
+  title: 'CONTACT ME',
   show: true,
   formspree: 'https://formspree.io/f/moqrrrer',
-  name: 'Name',
+  name: 'NAME',
   namePlaceholder: '',
-  email: 'Email',
+  email: 'EMAIL',
   emailPlaceholder: '',
-  phone: 'Phone',
+  phone: 'PHONE',
   phonePlaceholder: '',
-  message: 'Message',
+  message: 'MESSAGE',
   messagePlaceholder: '',
-  sendButton: 'Send'
+  sendButton: 'SEND'
 };

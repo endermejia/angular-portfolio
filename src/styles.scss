@@ -111,11 +111,19 @@ p {
 
 .form-control {
   border-radius: 0;
+  color: white;
+  background-color: black;
+
+  &:focus {
+    color: white;
+    background-color: black;
+    border-color: white;
+  }
 }
 
 body {
   font-size: 1.2em;
-    font-family: Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 .bg-dark {
@@ -124,4 +132,8 @@ body {
 
 .nav-link.active {
   color: #dc3545 !important;
+}
+
+.container {
+  max-width: none !important;
 }
