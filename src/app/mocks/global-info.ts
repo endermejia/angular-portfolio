@@ -7,10 +7,11 @@ export const PROFILE: ProfileModel = {
   name: 'Robotkid',
   image: 'assets/robotkid-white.png',
   description: {
-    title: 'PRODUCTS',
+    title: 'ABOUT ME',
     show: true,
     paragraphs: [
       'Para comprar mis productos, visita mi tienda en Instagram <a href="https://www.instagram.com/car2robotkid/">@car2robotkid</a>',
+      'O bien, puedes realizar tu pedido a través de esta web, rellenando el formulario de contacto que encontrarás más abajo.',
     ]
   }
 };
@@ -34,6 +35,10 @@ export const PRODUCTS: ItemModel[] = [
     price: '20€',
     link: 'https://www.amazon.es/dp/B08KQJQZQD?ref=myi_title_dp'
   }
+];
+
+export const SONGS: string[] = [
+  'prueba',
 ];
 
 export const CONTACT: ContactModel = {

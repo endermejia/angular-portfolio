@@ -1,0 +1,23 @@
+<section class="main-section">
+  <article>
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-4" *ngFor="let product of products">
+        <div class="center-div mb-4" [style.flex-direction]="'column'">
+          <a [href]="product.link"
+             target="_blank"
+             class="mb-3"
+             rel="noopener noreferrer">
+            <img [src]="product.icon"
+                 [alt]="product.name"
+                 class="img-fluid">
+          </a>
+          <h4>{{product.price}}</h4>
+          <h4>{{product.name}}</h4>
+        </div>
+        <hr class="badge-dark">
+      </div>
+    </div>
+    <!--    <hr class="badge-dark">-->
+    <!--    <app-reach-me></app-reach-me>-->
+  </article>
+</section>

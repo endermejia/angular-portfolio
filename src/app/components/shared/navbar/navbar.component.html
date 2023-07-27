@@ -1,20 +1,23 @@
 <nav class="navbar navbar-dark">
-	<div class="container">
-		<div class="center-div" [style.flex-direction]="'column'" [style.width.%]="100">
-			<div class="navbar-nav center-div" [style.flex-direction]="'row'">
-				<li class="nav-item m-4">
-					<a class="nav-link" routerLinkActive="active" routerLink="/home">HOME</a>
-				</li>
-				<li class="nav-item m-4">
-					<a class="nav-link" routerLinkActive="active" routerLink="/contact">CONTACT</a>
-				</li>
-			</div>
-      <div [style.min-width.%]="50" class="center-div">
+  <div class="container">
+    <div class="center-div" [style.flex-direction]="'column'" [style.width.%]="100">
+      <div class="navbar-nav center-div" [style.flex-direction]="'row'">
+        <li class="nav-item m-3">
+          <a class="nav-link" routerLinkActive="active" routerLink="/products">PRODUCTS</a>
+        </li>
+        <li class="nav-item m-3">
+          <a class="nav-link" routerLinkActive="active" routerLink="/about">ABOUT ME</a>
+        </li>
+        <li class="nav-item m-3">
+          <a class="nav-link" routerLinkActive="active" routerLink="/contact">CONTACT</a>
+        </li>
+      </div>
+      <div [style.max-width.px]="500" class="center-div">
         <img [src]="profile.image"
              [alt]="profile.name"
              [style.width]="'inherit'"
              class="img-fluid">
       </div>
-		</div>
-	</div>
+    </div>
+  </div>
 </nav>
