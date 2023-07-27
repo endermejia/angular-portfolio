@@ -1,7 +1,7 @@
 import {ProfileModel} from '../models/profile.model';
 import {ContactModel} from '../models/contact.model';
 import {ContactFormModel} from '../models/contact-form.model';
-import {ItemModel} from '../models/item.model';
+import {ProductModel} from '../models/product.model';
 
 export const PROFILE: ProfileModel = {
   name: 'Robotkid',
@@ -16,33 +16,32 @@ export const PROFILE: ProfileModel = {
   }
 };
 
-export const PRODUCTS: ItemModel[] = [
+export const PRODUCTS: ProductModel[] = [
   {
     name: 'CAMISETA DEMON',
     icon: 'assets/camiseta1.jpg',
-    price: '20€',
-    link: 'https://www.amazon.es/dp/B08KQJQZQD?ref=myi_title_dp'
+    price: 18.9,
+    sizes: ['S', 'M', 'L', 'XL'],
+    soldOut: false
   },
   {
     name: 'CAMISETA ROBOTKID',
     icon: 'assets/camiseta1.jpg',
-    price: '20€',
-    link: 'https://www.amazon.es/dp/B08KQJQZQD?ref=myi_title_dp'
+    price: 15.5,
+    sizes: ['S', 'M', 'L', 'XL'],
+    soldOut: false
   },
   {
     name: 'CAMISETA DARK',
     icon: 'assets/camiseta1.jpg',
-    price: '20€',
-    link: 'https://www.amazon.es/dp/B08KQJQZQD?ref=myi_title_dp'
+    price: 10.80,
+    sizes: ['S', 'M', 'L', 'XL'],
+    soldOut: true
   }
 ];
 
-export const SONGS: string[] = [
-  'prueba',
-];
-
 export const CONTACT: ContactModel = {
-  title: 'HOW TO CONTACT ME',
+  title: '', // 'HOW TO CONTACT ME',
   show: true,
   email: 'robotkid@gmail.com',
   phone: '666 666 666',

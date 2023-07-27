@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {ProfileModel} from '../../models/profile.model';
-import {PROFILE, SONGS} from '../../mocks/global-info';
+import {PROFILE} from '../../mocks/global-info';
 
 @Component({
   selector: 'app-about',
@@ -10,6 +10,5 @@ import {PROFILE, SONGS} from '../../mocks/global-info';
 export class AboutComponent {
 
   public profile: ProfileModel = PROFILE;
-  public songs: string[] = SONGS;
 
 }
