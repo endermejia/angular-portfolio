@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {ProfileModel} from '../../../models/profile.model';
 import {PROFILE} from '../../../mocks/global-info';
+import {CartService} from '../../../services/cart.service';
 
 @Component({
   selector: 'app-navbar',
@@ -10,5 +11,10 @@ import {PROFILE} from '../../../mocks/global-info';
 export class NavbarComponent {
 
   public profile: ProfileModel = PROFILE;
+
+  constructor(
+    public cartService: CartService
+  ) {
+  }
 
 }

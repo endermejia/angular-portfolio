@@ -4,6 +4,4 @@ export interface ContactModel {
   email?: string;
   items: ItemModel[];
   phone?: string;
-  show: boolean;
-  title: string;
 }

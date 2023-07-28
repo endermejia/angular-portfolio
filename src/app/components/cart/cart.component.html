@@ -1,0 +1,42 @@
+<section class="main-section container">
+  <article>
+    <div class="row" *ngFor="let product of cartService.cart">
+      <div class="col-6 col-lg-4">
+        <div class="center-div mb-4" [style.flex-direction]="'column'">
+          <img [src]="product.icon"
+               [alt]="product.name"
+               class="img-fluid mb-3">
+        </div>
+      </div>
+      <div class="col-6 d-flex flex-column justify-content-between">
+        <h4>{{product.name}}</h4>
+        <div>
+          TALLA: {{product.size}}
+        </div>
+        <div>
+          CANTIDAD: {{product.quantity}}
+        </div>
+        <div>TOTAL: <strong>{{product.price * product.quantity | currency:'EUR'}}</strong></div>
+        <small>
+          PRECIO UNITARIO: {{product.price | currency:'EUR'}}
+        </small>
+        <button class="btn btn-dark w-100"
+                (click)="cartService.remove(product)">
+          ELIMINAR
+        </button>
+        <hr class="badge-dark">
+      </div>
+    </div>
+    <ng-container *ngIf="!(cartService.cart.length)">
+      <h2>NO HAY PRODUCTOS EN EL CARRITO</h2>
+      <button class="btn btn-dark w-100"
+              routerLink="/">
+        VOLVER A LA TIENDA
+      </button>
+    </ng-container>
+    <hr class="badge-dark">
+    <h2>TOTAL: {{cartService.totalPrice | currency:'EUR'}}</h2>
+  </article>
+</section>
+
+

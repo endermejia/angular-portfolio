@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {PRODUCTS} from '../../mocks/global-info';
-import {ItemModel} from '../../models/item.model';
+import {ProductModel} from '../../models/product.model';
+import {CartService} from '../../services/cart.service';
 
 @Component({
   selector: 'app-products',
@@ -9,7 +10,11 @@ import {ItemModel} from '../../models/item.model';
 })
 export class ProductsComponent {
 
-  public products: ItemModel[] = PRODUCTS;
+  public products: ProductModel[] = PRODUCTS;
 
+  constructor(
+    public cartService: CartService
+  ) {
+  }
 
 }

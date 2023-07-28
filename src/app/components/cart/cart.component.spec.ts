@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ReachMeComponent } from './reach-me.component';
+import { CartComponent } from './cart.component';
 
-describe('ReachMeComponent', () => {
-  let component: ReachMeComponent;
-  let fixture: ComponentFixture<ReachMeComponent>;
+describe('ContactComponent', () => {
+  let component: CartComponent;
+  let fixture: ComponentFixture<CartComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ReachMeComponent ]
+      declarations: [ CartComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ReachMeComponent);
+    fixture = TestBed.createComponent(CartComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

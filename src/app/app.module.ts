@@ -4,33 +4,33 @@ import {LOCALE_ID} from '@angular/core';
 import {registerLocaleData} from '@angular/common';
 import localeEs from '@angular/common/locales/es';
 
-import {AboutComponent} from './components/about/about.component';
+import {ContactComponent} from './components/contact/contact.component';
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing.module';
-import {ContactComponent} from './components/contact/contact.component';
+import {CartComponent} from './components/cart/cart.component';
 import {FooterComponent} from './components/shared/footer/footer.component';
 import {NavbarComponent} from './components/shared/navbar/navbar.component';
 import {PageNotFoundComponent} from './components/page-not-found/page-not-found.component';
 import {ProductsComponent} from './components/products/products.component';
-import {ReachMeComponent} from './components/shared/reach-me/reach-me.component';
+import {FormsModule} from '@angular/forms';
 
 registerLocaleData(localeEs);
 
 @NgModule({
   declarations: [
-    AboutComponent,
-    AppComponent,
     ContactComponent,
+    AppComponent,
+    CartComponent,
     FooterComponent,
     NavbarComponent,
     PageNotFoundComponent,
     ProductsComponent,
-    ReachMeComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule
+    ],
   providers: [
     {
       provide: LOCALE_ID,

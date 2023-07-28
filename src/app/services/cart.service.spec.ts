@@ -18,8 +18,8 @@ describe('CartService', () => {
     expect(service.cart).toBeTruthy();
   });
 
-  it('should have a cartTotal property', () => {
-    expect(service.cartTotal).toBeTruthy();
+  it('should have a totalPrice property', () => {
+    expect(service.totalPrice).toBeTruthy();
   });
 
   it('should have a add method', () => {
@@ -30,9 +30,9 @@ describe('CartService', () => {
     expect(service.remove).toBeTruthy();
   });
 
-  it('test add and cartTotal methods', () => {
+  it('test add and totalPrice methods', () => {
     service.add({name: 'test', price: 10, icon: 'test', sizes: [], soldOut: false}, 'M', 1);
-    expect(service.cartTotal).toBe(10);
+    expect(service.totalPrice).toBe(10);
   });
 
 });

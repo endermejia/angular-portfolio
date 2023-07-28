@@ -1,4 +1,5 @@
-<section class="main-section">
+<section class="main-section container">
+  <pre></pre>
   <article>
     <div class="row">
       <div class="col-12 col-md-6 col-lg-4" *ngFor="let product of products">
@@ -6,13 +7,41 @@
           <img [src]="product.icon"
                [alt]="product.name"
                class="img-fluid mb-3">
-          <h4>{{product.price | currency:'EUR'}}</h4>
+          <h4>
+            <span *ngIf="!product.soldOut">{{product.price | currency:'EUR'}}</span>
+            <span *ngIf="product.soldOut" class="text-dark">SOLD OUT</span>
+          </h4>
           <h4>{{product.name}}</h4>
+          <div class="center-div w-100">
+            <div class="w-100 mr-2">
+              <select class="form-control"
+                      [disabled]="product.soldOut"
+                      [(ngModel)]="product.selectedSize">
+                <option *ngFor="let size of product.sizes">
+                  {{size}}
+                </option>
+              </select>
+            </div>
+            <div class="w-100 ml-2">
+              <select class="form-control"
+                      [disabled]="product.soldOut"
+                      [(ngModel)]="product.selectedQuantity">
+                <option *ngFor="let quantity of [1, 2, 3, 4, 5]">
+                  {{quantity}}
+                </option>
+              </select>
+            </div>
+          </div>
+          <div class="m-3 center-div w-100">
+            <button class="btn btn-dark w-100"
+                    [disabled]="product.soldOut || product.selectedQuantity < 1"
+                    (click)="cartService.add(product, product.selectedSize, product.selectedQuantity)">
+              COMPRAR
+            </button>
+          </div>
         </div>
         <hr class="badge-dark">
       </div>
     </div>
-    <!--    <hr class="badge-dark">-->
-    <!--    <app-reach-me></app-reach-me>-->
   </article>
 </section>

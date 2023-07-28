@@ -4,6 +4,8 @@ export interface ProductModel {
   sizes: string[];
   soldOut: boolean;
   icon: string;
+  selectedQuantity?: number;
+  selectedSize?: string;
 }
 
 export interface CartItemModel {

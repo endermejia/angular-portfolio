@@ -7,11 +7,11 @@ export const PROFILE: ProfileModel = {
   name: 'Robotkid',
   image: 'assets/robotkid-white.png',
   description: {
-    title: 'ABOUT ME',
+    title: '', // 'SOBRE MI',
     show: true,
     paragraphs: [
       'Para comprar mis productos, visita mi tienda en Instagram <a href="https://www.instagram.com/car2robotkid/">@car2robotkid</a>',
-      'O bien, puedes realizar tu pedido a través de esta web, rellenando el formulario de contacto que encontrarás más abajo.',
+      'O bien, puedes realizar tu pedido a través de esta web, seleccionando los productos que desees y tramitando el pedido desde el carrito.',
     ]
   }
 };
@@ -19,32 +19,35 @@ export const PROFILE: ProfileModel = {
 export const PRODUCTS: ProductModel[] = [
   {
     name: 'CAMISETA DEMON',
-    icon: 'assets/camiseta1.jpg',
+    icon: 'assets/casino2.webp',
     price: 18.9,
     sizes: ['S', 'M', 'L', 'XL'],
-    soldOut: false
+    soldOut: false,
+    selectedQuantity: 1,
+    selectedSize: 'M'
   },
   {
     name: 'CAMISETA ROBOTKID',
-    icon: 'assets/camiseta1.jpg',
+    icon: 'assets/casino3.webp',
     price: 15.5,
     sizes: ['S', 'M', 'L', 'XL'],
-    soldOut: false
+    soldOut: false,
+    selectedQuantity: 1,
+    selectedSize: 'M'
   },
   {
     name: 'CAMISETA DARK',
-    icon: 'assets/camiseta1.jpg',
+    icon: 'assets/casino.webp',
     price: 10.80,
     sizes: ['S', 'M', 'L', 'XL'],
-    soldOut: true
+    soldOut: true,
+    selectedQuantity: 1,
+    selectedSize: 'M'
   }
 ];
 
 export const CONTACT: ContactModel = {
-  title: '', // 'HOW TO CONTACT ME',
-  show: true,
   email: 'robotkid@gmail.com',
-  phone: '666 666 666',
   items: [
     {name: 'Instagram', link: 'https://www.instagram.com/car2robotkid/', icon: 'instagram'},
     {name: 'Spotify', link: 'https://open.spotify.com/artist/7zpwO9W2PC1II9m8eCuoG9', icon: 'spotify'},
@@ -52,17 +55,19 @@ export const CONTACT: ContactModel = {
   ]
 };
 
+
+
 export const CONTACT_FORM: ContactFormModel = {
-  title: 'CONTACT ME',
+  title: 'CONTACTO',
   show: true,
   formspree: 'https://formspree.io/f/moqrrrer',
-  name: 'NAME',
+  name: 'NOMBRE',
   namePlaceholder: '',
   email: 'EMAIL',
   emailPlaceholder: '',
-  phone: 'PHONE',
+  phone: 'TELÉFONO',
   phonePlaceholder: '',
-  message: 'MESSAGE',
+  message: 'MENSAJE',
   messagePlaceholder: '',
-  sendButton: 'SEND'
+  sendButton: 'ENVIAR'
 };

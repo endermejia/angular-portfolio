@@ -1,5 +1,4 @@
 import {Injectable} from '@angular/core';
-import {PRODUCTS} from '../mocks/global-info';
 import {CartItemModel, ProductModel} from '../models/product.model';
 
 @Injectable({
@@ -8,7 +7,6 @@ import {CartItemModel, ProductModel} from '../models/product.model';
 export class CartService {
 
   private cartItems: CartItemModel[] = [];
-  private products: ProductModel[] = PRODUCTS;
 
   constructor() {
   }
@@ -21,14 +19,14 @@ export class CartService {
     const cartItem: CartItemModel = {
       name: product.name,
       price: product.price,
-      quantity: inputQuantity,
+      quantity: Number(inputQuantity),
       size: inputSize,
       icon: product.icon
     };
     if (this.cartItems.length > 0) {
       const item = this.cartItems.find((p) => p.name === product.name && p.size === inputSize);
       if (item) {
-        item.quantity += inputQuantity;
+        item.quantity += Number(inputQuantity);
       } else {
         this.cartItems.push(cartItem);
       }
@@ -41,7 +39,11 @@ export class CartService {
     this.cartItems = this.cartItems.filter((item) => item !== cartItem);
   }
 
-  get cartTotal(): number {
+  get totalItems(): number {
+    return this.cartItems.reduce((acc, item) => acc + item.quantity, 0);
+  }
+
+  get totalPrice(): number {
     return this.cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
   }
 

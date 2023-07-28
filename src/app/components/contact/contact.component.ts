@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
+import {ProfileModel} from '../../models/profile.model';
+import {CONTACT_FORM, PROFILE} from '../../mocks/global-info';
 import {ContactFormModel} from '../../models/contact-form.model';
-import {CONTACT_FORM} from '../../mocks/global-info';
 
 @Component({
   selector: 'app-contact',
@@ -9,6 +10,6 @@ import {CONTACT_FORM} from '../../mocks/global-info';
 })
 export class ContactComponent {
 
+  public profile: ProfileModel = PROFILE;
   public contactForm: ContactFormModel = CONTACT_FORM;
-
 }
