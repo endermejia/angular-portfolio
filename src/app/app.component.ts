@@ -1,4 +1,6 @@
 import {Component} from '@angular/core';
+import {PROFILE} from './mocks/global-info';
+import {ProfileModel} from './models/profile.model';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,5 @@ import {Component} from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'frontendCV';
+  public profile: ProfileModel = PROFILE;
 }
