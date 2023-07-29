@@ -1,8 +1,12 @@
+export interface StockModel {
+  size: string;
+  quantity: number;
+}
+
 export interface ProductModel {
   name: string;
   price: number;
-  sizes: string[];
-  soldOut: boolean;
+  stock: StockModel[];
   icon: string;
   selectedQuantity?: number;
   selectedSize?: string;

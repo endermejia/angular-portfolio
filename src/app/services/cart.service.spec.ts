@@ -31,7 +31,7 @@ describe('CartService', () => {
   });
 
   it('test add and totalPrice methods', () => {
-    service.add({name: 'test', price: 10, icon: 'test', sizes: [], soldOut: false}, 'M', 1);
+    service.add({name: 'test', price: 10, icon: 'test', sizes: [], stock: 10}, 'M', 1);
     expect(service.totalPrice).toBe(10);
   });
 

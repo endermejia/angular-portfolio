@@ -21,17 +21,21 @@ export const PRODUCTS: ProductModel[] = [
     name: 'CAMISETA DEMON',
     icon: 'assets/casino2.webp',
     price: 18.9,
-    sizes: ['S', 'M', 'L', 'XL'],
-    soldOut: false,
+    stock: [
+      {size: 'S', quantity: 10},
+    ],
     selectedQuantity: 1,
-    selectedSize: 'M'
+    selectedSize: ''
   },
   {
     name: 'CAMISETA ROBOTKID',
     icon: 'assets/casino3.webp',
     price: 15.5,
-    sizes: ['S', 'M', 'L', 'XL'],
-    soldOut: false,
+    stock: [
+      {size: 'M', quantity: 10},
+      {size: 'L', quantity: 5},
+      {size: 'XL', quantity: 6}
+    ],
     selectedQuantity: 1,
     selectedSize: 'M'
   },
@@ -39,10 +43,11 @@ export const PRODUCTS: ProductModel[] = [
     name: 'CAMISETA DARK',
     icon: 'assets/casino.webp',
     price: 10.80,
-    sizes: ['S', 'M', 'L', 'XL'],
-    soldOut: true,
+    stock: [
+      {size: 'L', quantity: 2},
+    ],
     selectedQuantity: 1,
-    selectedSize: 'M'
+    selectedSize: 'L'
   }
 ];
 
@@ -54,8 +59,6 @@ export const CONTACT: ContactModel = {
     {name: 'YouTube', link: 'https://www.youtube.com/@R0BOTKID', icon: 'youtube'},
   ]
 };
-
-
 
 export const CONTACT_FORM: ContactFormModel = {
   title: 'CONTACTO',

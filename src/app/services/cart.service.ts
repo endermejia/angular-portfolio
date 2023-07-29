@@ -24,13 +24,9 @@ export class CartService {
       size: inputSize,
       icon: product.icon
     };
-    if (this.cartItems.length > 0) {
-      const item = this.cartItems.find((p) => p.name === product.name && p.size === inputSize);
-      if (item) {
-        item.quantity += Number(inputQuantity);
-      } else {
-        this.cartItems.push(cartItem);
-      }
+    const item = this.cartItems.find((p) => p.name === product.name && p.size === inputSize);
+    if (item) {
+      item.quantity += cartItem.quantity;
     } else {
       this.cartItems.push(cartItem);
     }
@@ -48,6 +44,19 @@ export class CartService {
 
   get totalPrice(): number {
     return this.cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
+  }
+
+  stockQuantities(product: ProductModel): number[] {
+    const stock = product.stock.find((s) => s.size === product.selectedSize)?.quantity;
+    const buyed: number = this.cartItems
+      .filter((item) => item.name === product.name && item.size === product.selectedSize)
+      .reduce((acc, item) => acc + item.quantity, 0);
+    return Array.from({length: stock - buyed}, (_, i) => i + 1);
+
+  }
+
+  stockSizes(product: ProductModel): string[] {
+    return product.stock.map((s) => s.size);
   }
 
   private setCartItemsStorage(): void {

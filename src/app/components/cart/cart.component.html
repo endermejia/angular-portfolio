@@ -11,19 +11,21 @@
       <div class="col-6 d-flex flex-column justify-content-between">
         <h4>{{product.name}}</h4>
         <div>
+          {{product.price | currency:'EUR'}}
+        </div>
+        <div>
           TALLA: {{product.size}}
         </div>
         <div>
           CANTIDAD: {{product.quantity}}
         </div>
-        <small>
-          PRECIO UNITARIO: {{product.price | currency:'EUR'}}
-        </small>
+
         <button class="btn btn-dark w-100"
                 data-toggle="modal" data-target="#modalEliminar">
           ELIMINAR
         </button>
-        <div class="modal fade" id="modalEliminar" tabindex="-1" role="dialog" aria-labelledby="modalEliminarLabel" aria-hidden="true">
+        <div class="modal fade" id="modalEliminar" tabindex="-1" role="dialog" aria-labelledby="modalEliminarLabel"
+             aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content bg-dark border-light">
               <div class="modal-header">
