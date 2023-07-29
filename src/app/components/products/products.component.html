@@ -16,7 +16,8 @@
             <div class="w-100 mr-2">
               <select class="form-control"
                       [disabled]="product.soldOut"
-                      [(ngModel)]="product.selectedSize">
+                      (change)="product.selectedSize = $event.target.value"
+                      [value]="product.selectedSize">
                 <option *ngFor="let size of product.sizes">
                   {{size}}
                 </option>
@@ -25,7 +26,8 @@
             <div class="w-100 ml-2">
               <select class="form-control"
                       [disabled]="product.soldOut"
-                      [(ngModel)]="product.selectedQuantity">
+                      (change)="product.selectedQuantity = $event.target.value"
+                      [value]="product.selectedQuantity">
                 <option *ngFor="let quantity of [1, 2, 3, 4, 5]">
                   {{quantity}}
                 </option>
