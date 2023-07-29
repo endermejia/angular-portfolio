@@ -9,6 +9,7 @@ export class CartService {
   private cartItems: CartItemModel[] = [];
 
   constructor() {
+    this.getCartItemsStorage();
   }
 
   get cart(): CartItemModel[] {
@@ -33,10 +34,12 @@ export class CartService {
     } else {
       this.cartItems.push(cartItem);
     }
+    this.setCartItemsStorage();
   }
 
   remove(cartItem: CartItemModel): void {
     this.cartItems = this.cartItems.filter((item) => item !== cartItem);
+    this.setCartItemsStorage();
   }
 
   get totalItems(): number {
@@ -45,6 +48,17 @@ export class CartService {
 
   get totalPrice(): number {
     return this.cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
+  }
+
+  private setCartItemsStorage(): void {
+    localStorage.setItem('cartItems', JSON.stringify(this.cartItems));
+  }
+
+  private getCartItemsStorage(): void {
+    const cartItems = localStorage.getItem('cartItems');
+    if (cartItems) {
+      this.cartItems = JSON.parse(cartItems);
+    }
   }
 
 }
