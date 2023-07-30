@@ -12,6 +12,7 @@
           <div class="center-div w-100">
             <div class="w-100 mr-2">
               <select class="form-control"
+                      [disabled]="cartService.soldOutProduct(product)"
                       (change)="product.selectedSize = $event.target.value"
                       [value]="product.selectedSize">
                 <option *ngFor="let size of cartService.stockSizes(product)">

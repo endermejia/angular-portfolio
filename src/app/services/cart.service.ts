@@ -48,15 +48,24 @@ export class CartService {
 
   stockQuantities(product: ProductModel): number[] {
     const stock = product.stock.find((s) => s.size === product.selectedSize)?.quantity;
-    const buyed: number = this.cartItems
-      .filter((item) => item.name === product.name && item.size === product.selectedSize)
-      .reduce((acc, item) => acc + item.quantity, 0);
+    const buyed = this.quantityBuyed(product.name, product.selectedSize);
     return Array.from({length: stock - buyed}, (_, i) => i + 1);
 
   }
 
+  quantityBuyed(productName: string, productSize: string): number {
+    return this.cartItems
+      .filter((item) => item.name === productName && item.size === productSize)
+      .reduce((acc, item) => acc + item.quantity, 0);
+  }
+
   stockSizes(product: ProductModel): string[] {
     return product.stock.map((s) => s.size);
+  }
+
+  soldOutProduct(product: ProductModel): boolean {
+    return product.stock
+      .every((s) => s.quantity === this.quantityBuyed(product.name, s.size));
   }
 
   private setCartItemsStorage(): void {

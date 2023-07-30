@@ -1,49 +1,29 @@
 <section class="main-section container">
   <article>
-    <div class="row" *ngFor="let product of cartService.cart">
+    <div class="row" *ngFor="let cartItem of cartService.cart">
       <div class="col-6 col-lg-4">
         <div class="center-div mb-4" [style.flex-direction]="'column'">
-          <img [src]="product.icon"
-               [alt]="product.name"
+          <img [src]="cartItem.icon"
+               [alt]="cartItem.name"
                class="img-fluid mb-3">
         </div>
       </div>
       <div class="col-6 d-flex flex-column justify-content-between">
-        <h4>{{product.name}}</h4>
+        <h4>{{cartItem.name}}</h4>
         <div>
-          {{product.price | currency:'EUR'}}
+          {{cartItem.price | currency:'EUR'}}
         </div>
         <div>
-          TALLA: {{product.size}}
+          TALLA: {{cartItem.size}}
         </div>
         <div>
-          CANTIDAD: {{product.quantity}}
+          CANTIDAD: {{cartItem.quantity}}
         </div>
 
         <button class="btn btn-dark w-100"
-                data-toggle="modal" data-target="#modalEliminar">
+                (click)="remove(cartItem)">
           ELIMINAR
         </button>
-        <div class="modal fade" id="modalEliminar" tabindex="-1" role="dialog" aria-labelledby="modalEliminarLabel"
-             aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content bg-dark border-light">
-              <div class="modal-header">
-                <h5 class="modal-title" id="modalEliminarLabel">
-                  ¿ELIMINAR '{{product.name}}' DEL CARRITO?
-                </h5>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-dark" data-dismiss="modal">
-                  CANCELAR
-                </button>
-                <button type="button" class="btn btn-dark" data-dismiss="modal" (click)="cartService.remove(product)">
-                  ACEPTAR
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
         <hr class="badge-dark">
       </div>
     </div>
