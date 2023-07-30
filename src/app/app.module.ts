@@ -8,7 +8,7 @@ import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing.module';
 import {CartComponent} from './components/cart/cart.component';
 import {ContactComponent} from './components/contact/contact.component';
-import {DialogComponent} from './dialog/dialog.component';
+import {DialogComponent} from './components/dialog/dialog.component';
 import {FooterComponent} from './components/shared/footer/footer.component';
 import {NavbarComponent} from './components/shared/navbar/navbar.component';
 import {PageNotFoundComponent} from './components/page-not-found/page-not-found.component';
@@ -21,11 +21,11 @@ registerLocaleData(localeEs);
         AppComponent,
         CartComponent,
         ContactComponent,
-        DialogComponent,
         FooterComponent,
         NavbarComponent,
         PageNotFoundComponent,
         ProductsComponent,
+        DialogComponent,
     ],
     imports: [
         BrowserModule,
