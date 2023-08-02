@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {DialogService} from '../../services/dialog.service';
 
 @Component({
@@ -6,18 +6,22 @@ import {DialogService} from '../../services/dialog.service';
     templateUrl: './dialog.component.html',
     styleUrls: ['./dialog.component.scss'],
 })
-export class DialogComponent {
+export class DialogComponent implements OnInit {
+
+    title: string;
+    message: string;
+
     constructor(
         private dialogService: DialogService
     ) {
     }
 
-    get title(): string {
-        return this.dialogService.getDialogData().title;
-    }
-
-    get message(): string {
-        return this.dialogService.getDialogData().message;
+    ngOnInit() {
+        this.dialogService.dialogData.subscribe((data: { title: string, message: string }) => {
+            this.title = data.title;
+            this.message = data.message;
+            document.getElementById('buttonDialog').click();
+        });
     }
 
     onConfirm() {
