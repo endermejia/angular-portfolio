@@ -10,6 +10,7 @@ export class DialogComponent implements OnInit {
 
     title: string;
     message: string;
+    showCancelButton: boolean;
 
     constructor(
         private dialogService: DialogService
@@ -17,10 +18,16 @@ export class DialogComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.dialogService.dialogData.subscribe((data: { title: string, message: string }) => {
-            this.title = data.title;
-            this.message = data.message;
-            document.getElementById('buttonDialog').click();
+        this.dialogService.dialogData.subscribe({
+            next: (data: { title: string, message: string, showCancelButton: boolean }) => {
+                this.title = data.title;
+                this.message = data.message;
+                this.showCancelButton = data.showCancelButton;
+                document.getElementById('buttonDialog').click();
+            },
+            error: (err) => {
+                console.error(err);
+            }
         });
     }
 

@@ -7,10 +7,10 @@ export class DialogService implements OnDestroy{
     }
 
     private _resultSubject = new Subject<boolean>();
-    private _dialogData = new Subject<{ title: string, message: string }>();
+    private _dialogData = new Subject<{ title: string, message: string, showCancelButton: boolean }>();
 
-    open(title: string, message: string): Observable<boolean> {
-        this._dialogData.next({title, message});
+    open(title: string, message: string, showCancelButton = true): Observable<boolean> {
+        this._dialogData.next({title, message, showCancelButton});
         return this._resultSubject.asObservable();
     }
 
@@ -18,7 +18,7 @@ export class DialogService implements OnDestroy{
         this._resultSubject.next(confirm);
     }
 
-    get dialogData(): Observable<{ title: string, message: string }> {
+    get dialogData(): Observable<{ title: string, message: string, showCancelButton: boolean }> {
         return this._dialogData;
     }
 

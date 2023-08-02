@@ -8,7 +8,6 @@
 
 <div id="modalDialog"
      class="modal fade"
-     data-backdrop="static"
      tabindex="-1" role="dialog"
      aria-labelledby="modalDialogLabel">
   <div class="modal-dialog modal-dialog-centered" role="document">
@@ -25,6 +24,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-dark" data-dismiss="modal"
+                *ngIf="showCancelButton"
                 (click)="onCancel()">
           CANCELAR
         </button>
