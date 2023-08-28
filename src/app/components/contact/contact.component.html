@@ -10,60 +10,58 @@
     </div>
   </article>
   <article>
-    <div *ngIf="contactForm.show">
-      <h2>{{contactForm.title}}</h2>
-      <form
-        [action]="contactForm.formspree"
-        method="POST">
+    <div *ngIf="contactInfo.show">
+      <h2>{{contactInfo.title}}</h2>
+      <form>
         <fieldset>
           <div class="form-row">
             <div class="form-group col-lg-6">
-              <label for="inputName">{{contactForm.name}}</label>
+              <label for="inputName">{{contactInfo.name}}</label>
               <input
                 id="inputName"
                 class="form-control"
                 type="text"
                 name="Name"
-                [placeholder]="contactForm.namePlaceholder"
+                [placeholder]="contactInfo.namePlaceholder"
                 required>
             </div>
           </div>
           <div class="form-row">
             <div class="form-group col-lg-6">
-              <label for="inputEmail">{{contactForm.email}}</label>
+              <label for="inputEmail">{{contactInfo.email}}</label>
               <input
                 id="inputEmail"
                 class="form-control"
                 type="email"
                 name="Email"
-                [placeholder]="contactForm.emailPlaceholder"
+                [placeholder]="contactInfo.emailPlaceholder"
                 required>
             </div>
             <div class="form-group col-lg-6">
-              <label for="inputTelephone">{{contactForm.phone}}</label>
+              <label for="inputTelephone">{{contactInfo.phone}}</label>
               <input
                 id="inputTelephone"
                 class="form-control"
                 type="tel"
                 name="Phone"
-                [placeholder]="contactForm.phonePlaceholder"
+                [placeholder]="contactInfo.phonePlaceholder"
                 required>
             </div>
           </div>
           <div class="form-group">
-            <label for="messageTextArea">{{contactForm.message}}</label>
+            <label for="messageTextArea">{{contactInfo.message}}</label>
             <textarea
               id="messageTextArea"
               class="form-control"
               rows="3"
               name="Message"
-              [placeholder]="contactForm.messagePlaceholder"
+              [placeholder]="contactInfo.messagePlaceholder"
               required></textarea>
           </div>
           <button
-            type="submit"
+            (click)="sendMessage()"
             class="btn btn-dark mb-2">
-            {{contactForm.sendButton}}
+            {{contactInfo.sendButton}}
           </button>
         </fieldset>
       </form>

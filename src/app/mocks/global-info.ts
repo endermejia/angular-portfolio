@@ -1,6 +1,6 @@
 import {ProfileModel} from '../models/profile.model';
 import {ContactModel} from '../models/contact.model';
-import {ContactFormModel} from '../models/contact-form.model';
+import {ContactInfoModel} from '../models/contact-info.model';
 import {ProductModel} from '../models/product.model';
 
 export const PROFILE: ProfileModel = {
@@ -60,7 +60,7 @@ export const CONTACT: ContactModel = {
   ]
 };
 
-export const CONTACT_FORM: ContactFormModel = {
+export const CONTACT_INFO: ContactInfoModel = {
   title: 'CONTACTO',
   show: true,
   formspree: 'https://formspree.io/f/moqrrrer',

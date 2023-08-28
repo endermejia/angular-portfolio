@@ -13,6 +13,8 @@ import {FooterComponent} from './components/shared/footer/footer.component';
 import {NavbarComponent} from './components/shared/navbar/navbar.component';
 import {PageNotFoundComponent} from './components/page-not-found/page-not-found.component';
 import {ProductsComponent} from './components/products/products.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
 
 registerLocaleData(localeEs);
 
@@ -29,7 +31,10 @@ registerLocaleData(localeEs);
     ],
     imports: [
         BrowserModule,
-        AppRoutingModule
+        AppRoutingModule,
+        FormsModule,
+        ReactiveFormsModule,
+        HttpClientModule,
     ],
     providers: [
         {

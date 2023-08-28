@@ -1,4 +1,4 @@
-export interface ContactFormModel {
+export interface ContactInfoModel {
   email: string;
   emailPlaceholder: string;
   formspree: string;
