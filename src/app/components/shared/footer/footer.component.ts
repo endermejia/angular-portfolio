@@ -1,4 +1,6 @@
 import {Component} from '@angular/core';
+import {ContactModel} from "../../../models/contact.model";
+import {CONTACT} from '../../../mocks/global-info';
 
 @Component({
 	selector: 'app-footer',
@@ -7,6 +9,8 @@ import {Component} from '@angular/core';
 })
 
 export class FooterComponent {
+
+  contact: ContactModel = CONTACT;
 
 	year = new Date().getFullYear();
 

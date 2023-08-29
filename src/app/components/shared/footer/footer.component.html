@@ -1,28 +1,16 @@
 <link rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <section class="footer center-div flex-column">
-  <div class="d-flex ">
-    <a class="footer-icon"
-       href="https://www.linkedin.com/in/endermejia/"
-       target="_blank"
-       title="Linkedin"
-       itemprop="significantLink">
-      <i class="fa fa-linkedin"></i>
-    </a>
-    <a class="footer-icon"
-       href="https://github.com/endermejia"
-       target="_blank"
-       title="GitHub"
-       itemprop="significantLink">
-      <i class="fa fa-github"></i>
-    </a>
-    <a class="footer-icon"
-       href="https://www.instagram.com/gabri.mejia/"
-       target="_blank"
-       title="Instagram"
-       itemprop="significantLink">
-      <i class="fa fa-instagram"></i>
-    </a>
+  <div class="d-flex">
+    <ng-container *ngFor="let item of contact.items">
+      <a class="footer-icon"
+         href="{{item.link}}"
+         target="_blank"
+         title="{{item.name}}"
+         itemprop="significantLink">
+        <i class="fa fa-{{item.icon}}"></i>
+      </a>
+    </ng-container>
   </div>
   <span>© {{year}} Copyright: Gabriel Mejía</span>
 </section>
