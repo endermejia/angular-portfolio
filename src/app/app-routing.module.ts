@@ -1,27 +1,29 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
+import {AboutComponent} from './components/about/about.component';
 import {ContactComponent} from './components/contact/contact.component';
-import {LifestyleComponent} from './components/lifestyle/lifestyle.component';
-import {PageNotFoundComponent} from './components/page-not-found/page-not-found.component';
-import {ProfileComponent} from './components/profile/profile.component';
+import {HomeComponent} from './components/home/home.component';
+import {ResumeComponent} from './components/resume/resume.component';
 
 
 const routes: Routes = [
   {
-    path: 'profile', component: ProfileComponent
+    path: 'home', component: HomeComponent
   },
   {
-    path: 'lifestyle', component: LifestyleComponent
+    path: 'about', component: AboutComponent
+  },
+  {
+    path: 'resume', component: ResumeComponent
   },
   {
     path: 'contact', component: ContactComponent
   },
   {
-    path: '', component: ProfileComponent
-  },
-  {
-    path: '**', component: PageNotFoundComponent
-  },
+    path: '**',
+    pathMatch: 'full',
+    redirectTo: 'home'
+  }
 ];
 
 @NgModule({

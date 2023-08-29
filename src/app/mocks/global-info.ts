@@ -6,13 +6,13 @@ import {GithubReposModel} from '../models/github-repos.model';
 import {SkillsModel} from '../models/skills.model';
 
 export const PROFILE: ProfileModel = {
-  name: 'gabrielMejia();',
+  name: 'Gabriel Mejía',
   description: {
-    title: 'Gabriel Mejía',
+    title: 'FrontEnd Developer',
     show: true,
     paragraphs: [
-      'Senior FrontEnd Deveoper at <a href="https://www.ricoh.es/" target="_blank">RICOH</a>.',
-      'I’m a passionate climber and a good and motivated programmer.',
+      'Senior FrontEnd Deveoper at <a href="https://www.ricoh.es/" target="_blank" class="text-gradient">RICOH</a>.',
+      'I’m a good and motivated programmer 👨‍💻 and a passionate climber 🧗‍♂️.',
       'I’m a Frontend Developer with more than 3 years of experience in Angular and Typescript.',
     ]
   }
@@ -31,18 +31,18 @@ export const CONTACT: ContactModel = {
 };
 
 export const CONTACT_FORM: ContactFormModel = {
-  title: 'Contact me',
+  title: 'How can I help you?',
   show: true,
   formspree: 'https://formspree.io/f/moqrrrer',
   name: 'Name',
-  namePlaceholder: 'Insert your name',
+  namePlaceholder: '',
   email: 'Email',
-  emailPlaceholder: 'Insert your email',
+  emailPlaceholder: '',
   phone: 'Phone',
-  phonePlaceholder: 'Insert your phone number',
+  phonePlaceholder: '',
   message: 'Message',
-  messagePlaceholder: 'Write your message',
-  sendButton: 'Send'
+  messagePlaceholder: '',
+  sendButton: 'Send message'
 };
 
 export const GITHUB_ACTIVITY: GithubActivityModel = {

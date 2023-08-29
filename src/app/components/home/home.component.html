@@ -1,0 +1,29 @@
+<section class="main-section">
+  <article>
+    <div class="d-lg-flex mt-lg-5">
+      <div class="col-lg-6 pe-lg-2">
+        <div id="profile-img">
+          <img src="../../../assets/profilePhoto.jpg" alt="profile_img">
+        </div>
+      </div>
+      <div class="col-lg-6 ps-lg-2 center-div">
+        <div *ngIf="profile.description.show">
+          <div class="mb-lg-5 mb-3">
+            <h1><b>
+              Hi, I'm
+              <span class="text-primary text-gradient">{{profile.name}}</span>
+              <span class="hand">👋</span>
+            </b></h1>
+            <h3><b>I'm a {{profile.description.title}}.</b></h3>
+          </div>
+
+
+          <p *ngFor="let paragraph of profile.description.paragraphs"
+             [style.font-size.em]="1.2"
+             [innerHTML]="paragraph">
+          </p>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
