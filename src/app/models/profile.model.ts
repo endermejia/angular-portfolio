@@ -7,5 +7,4 @@ export interface ProfileDescriptionModel {
 export interface ProfileModel {
   description?: ProfileDescriptionModel;
   name: string;
-  resumeUrl?: string;
 }
