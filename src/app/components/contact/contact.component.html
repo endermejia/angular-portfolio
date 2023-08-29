@@ -1,6 +1,23 @@
 <section class="main-section">
   <article class="mt-lg-5">
     <div *ngIf="contactForm.show">
+      <h2 class="mb-lg-5">{{contact.title}}</h2>
+      <p class="mb-lg-5 mb-3 ">
+        <a href="mailto:{{contact.email}}" class="text-gradient">
+          <i class="fa fa-envelope-o mx-3"></i>
+          {{contact.email}}
+        </a>
+      </p>
+      <p class="mb-lg-5 mb-3">
+        <a href="tel:{{contact.phone}}" class="text-gradient">
+          <i class="fa fa-phone mx-3"></i>
+          {{contact.phone}}
+        </a>
+      </p>
+
+
+    </div>
+    <div *ngIf="contactForm.show">
       <h2 class="mb-lg-5 mb-3">{{contactForm.title}}</h2>
       <form
         [action]="contactForm.formspree"

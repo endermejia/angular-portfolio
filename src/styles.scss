@@ -1,16 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+$angle: 150deg;
+$primary-color: #1edcfb;
+$secondary-color: #be78fa;
 
 .btn {
   border-radius: 0;
   border: none;
   font-weight: bold;
   background: linear-gradient(
-      150deg,
-      rgb(30, 220, 250),
-      rgb(190, 120, 250)
+      $angle,
+      $primary-color,
+      $secondary-color
   );
 
   transition: all 0.3s ease-in-out;
+
   &:hover {
     opacity: 0.8;
   }
@@ -20,6 +24,7 @@ a {
   text-decoration: none;
   font-weight: bold;
   transition: all 0.3s ease-in-out;
+
   &:hover {
     opacity: 0.5;
   }
@@ -27,6 +32,7 @@ a {
 
 p {
   text-align: justify;
+  font-size: 1.2em;
 }
 
 .main-section {
@@ -62,9 +68,9 @@ p {
 
 .text-gradient {
   background: -webkit-linear-gradient(
-      150deg,
-      rgb(30, 220, 250),
-      rgb(190, 120, 250)
+      $angle,
+      $primary-color,
+      $secondary-color
   );
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -78,9 +84,9 @@ p {
 
 .nav-link.active {
   border-image-source: linear-gradient(
-      150deg,
-      rgb(30, 220, 250),
-      rgb(190, 120, 250)
+      $angle,
+      $primary-color,
+      $secondary-color
   );
   border-image-slice: 1;
   border-bottom: 5px solid transparent;

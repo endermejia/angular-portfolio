@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {ContactFormModel} from '../../models/contact-form.model';
-import {CONTACT_FORM} from '../../mocks/global-info';
+import {ContactModel} from '../../models/contact.model';
+import {CONTACT, CONTACT_FORM} from '../../mocks/global-info';
 
 @Component({
   selector: 'app-contact',
@@ -10,5 +11,6 @@ import {CONTACT_FORM} from '../../mocks/global-info';
 export class ContactComponent {
 
   public readonly contactForm: ContactFormModel = CONTACT_FORM;
+  public readonly contact: ContactModel = CONTACT;
 
 }

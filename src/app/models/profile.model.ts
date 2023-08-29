@@ -1,3 +1,5 @@
+import {ItemModel} from './item.model';
+
 export interface ProfileDescriptionModel {
   paragraphs: string[];
   show: boolean;
@@ -7,4 +9,7 @@ export interface ProfileDescriptionModel {
 export interface ProfileModel {
   description?: ProfileDescriptionModel;
   name: string;
+  skills?: ItemModel[];
+  experience?: ItemModel[];
+  education?: ItemModel[];
 }

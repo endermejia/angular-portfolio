@@ -19,7 +19,34 @@
 
 
           <p *ngFor="let paragraph of profile.description.paragraphs"
-             [style.font-size.em]="1.2"
+             [innerHTML]="paragraph">
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="d-lg-flex mt-lg-5">
+      <div class="col-lg-6 ps-lg-2">
+        <div *ngIf="profile.description.show">
+          <div class="mb-lg-5 mb-3">
+            <h1><b>
+              <span class="text-primary text-gradient">Experience</span>
+            </b></h1>
+          </div>
+          <p *ngFor="let paragraph of profile.description.paragraphs"
+             [innerHTML]="paragraph">
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-6 ps-lg-2">
+        <div *ngIf="profile.description.show">
+          <div class="mb-lg-5 mb-3">
+            <h1><b>
+              <span class="text-primary text-gradient">Education & Awards</span>
+            </b></h1>
+          </div>
+
+
+          <p *ngFor="let paragraph of profile.description.paragraphs"
              [innerHTML]="paragraph">
           </p>
         </div>
