@@ -1,7 +1,7 @@
 <section class="main-section">
-  <article>
+  <article class="mt-lg-5">
     <div *ngIf="contactForm.show">
-      <h2>{{contactForm.title}}</h2>
+      <h2 class="mb-lg-5 mb-3">{{contactForm.title}}</h2>
       <form
         [action]="contactForm.formspree"
         method="POST">
@@ -50,7 +50,7 @@
           </div>
           <button
             type="submit"
-            class="btn btn-primary mb-2">
+            class="btn btn-primary mt-2">
             {{contactForm.sendButton}}
           </button>
         </fieldset>

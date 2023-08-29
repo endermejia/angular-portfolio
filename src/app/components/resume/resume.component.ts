@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {PROFILE} from "../../mocks/global-info";
+import {ProfileModel} from "../../models/profile.model";
 
 @Component({
   selector: 'app-resume',
@@ -6,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./resume.component.scss']
 })
 export class ResumeComponent {
+
+  public readonly profile: ProfileModel = PROFILE;
 
 }

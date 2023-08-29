@@ -15,7 +15,8 @@ export const PROFILE: ProfileModel = {
       'I’m a good and motivated programmer 👨‍💻 and a passionate climber 🧗‍♂️.',
       'I’m a Frontend Developer with more than 3 years of experience in Angular and Typescript.',
     ]
-  }
+  },
+  resumeUrl: 'https://drive.google.com/file/d/1C2SgKZkYbxfSc3vOB_VN2xMcbAl0d49h/view?usp=sharing'
 };
 
 export const CONTACT: ContactModel = {
@@ -45,29 +46,8 @@ export const CONTACT_FORM: ContactFormModel = {
   sendButton: 'Send message'
 };
 
-export const GITHUB_ACTIVITY: GithubActivityModel = {
-  title: 'Activity',
-  show: true,
-  gitHubStats: 'https://github-readme-stats.vercel.app/api?username=endermejia&show_icons=true&include_all_commits=true&hide=prs,contribs',
-  gitHubLangs: 'https://github-readme-stats.vercel.app/api/top-langs/?username=endermejia&layout=compact'
-};
-
-export const GITHUB_REPOS: GithubReposModel = {
-  title: 'My repositories',
-  show: true,
-  baseUrlImage: 'https://github-readme-stats.vercel.app/api/pin/?username=endermejia&repo=',
-  baseUrlRepo: 'https://github.com/endermejia/',
-  repos: [
-    'frontendCV',
-    'ctrlThings',
-    'clubescaladacostablanca',
-    'nobelApp'
-  ]
-};
-
 export const SKILLS: SkillsModel = {
   title: 'Skills',
-  show: true,
   items: [
     {name: 'Angular'},
     {name: 'Typescript'},

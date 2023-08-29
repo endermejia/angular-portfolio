@@ -10,8 +10,7 @@ import {CONTACT} from '../../../mocks/global-info';
 
 export class FooterComponent {
 
-  contact: ContactModel = CONTACT;
-
-	year = new Date().getFullYear();
+  public readonly contact: ContactModel = CONTACT;
+	public readonly year = new Date().getFullYear();
 
 }
