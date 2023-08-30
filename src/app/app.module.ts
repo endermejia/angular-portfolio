@@ -12,6 +12,7 @@ import {HomeComponent} from './components/home/home.component';
 import {NavbarComponent} from './components/shared/navbar/navbar.component';
 import {ProjectsComponent} from './components/projects/projects.component';
 import {ResumeComponent} from './components/resume/resume.component';
+import { ItemCardComponent } from './components/shared/item-card/item-card.component';
 
 registerLocaleData(localeEs);
 
@@ -24,6 +25,7 @@ registerLocaleData(localeEs);
     NavbarComponent,
     ProjectsComponent,
     ResumeComponent,
+    ItemCardComponent,
   ],
   imports: [
     BrowserModule,

@@ -12,4 +12,5 @@ export interface ProfileModel {
   skills?: ItemModel[];
   experience?: ItemModel[];
   education?: ItemModel[];
+  projects?: ItemModel[];
 }

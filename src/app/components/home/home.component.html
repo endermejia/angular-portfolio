@@ -3,7 +3,7 @@
     <div class="d-lg-flex mt-lg-5">
       <div class="col-lg-6 pe-lg-2">
         <div id="profile-img">
-          <img src="../../../assets/profilePhoto.jpg" alt="profile_img">
+          <img src="../../../assets/profile.webp" alt="profile_img">
         </div>
       </div>
       <div class="col-lg-6 ps-lg-2 center-div">
@@ -32,9 +32,11 @@
               <span class="text-primary text-gradient">Experience</span>
             </b></h1>
           </div>
-          <p *ngFor="let paragraph of profile.description.paragraphs"
-             [innerHTML]="paragraph">
-          </p>
+          <ng-container *ngFor="let item of profile.experience">
+            <div class="mb-5">
+              <app-item-card [item]="item"></app-item-card>
+            </div>
+          </ng-container>
         </div>
       </div>
       <div class="col-lg-6 ps-lg-2">
@@ -44,11 +46,11 @@
               <span class="text-primary text-gradient">Education & Awards</span>
             </b></h1>
           </div>
-
-
-          <p *ngFor="let paragraph of profile.description.paragraphs"
-             [innerHTML]="paragraph">
-          </p>
+          <ng-container *ngFor="let item of profile.education">
+            <div class="mb-5">
+              <app-item-card [item]="item"></app-item-card>
+            </div>
+          </ng-container>
         </div>
       </div>
     </div>
