@@ -5,14 +5,16 @@ import {registerLocaleData} from '@angular/common';
 import localeEs from '@angular/common/locales/es';
 
 import {AppRoutingModule} from './app-routing.module';
+
 import {AppComponent} from './app.component';
 import {ContactComponent} from './components/contact/contact.component';
 import {FooterComponent} from './components/shared/footer/footer.component';
 import {HomeComponent} from './components/home/home.component';
+import {ItemCardComponent} from './components/shared/item-card/item-card.component';
 import {NavbarComponent} from './components/shared/navbar/navbar.component';
+import {ProjectCardComponent} from './components/shared/project-card/project-card.component';
 import {ProjectsComponent} from './components/projects/projects.component';
 import {ResumeComponent} from './components/resume/resume.component';
-import { ItemCardComponent } from './components/shared/item-card/item-card.component';
 
 registerLocaleData(localeEs);
 
@@ -22,10 +24,11 @@ registerLocaleData(localeEs);
     ContactComponent,
     FooterComponent,
     HomeComponent,
+    ItemCardComponent,
     NavbarComponent,
+    ProjectCardComponent,
     ProjectsComponent,
     ResumeComponent,
-    ItemCardComponent,
   ],
   imports: [
     BrowserModule,
