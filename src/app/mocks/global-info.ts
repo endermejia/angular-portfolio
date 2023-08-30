@@ -64,6 +64,47 @@ export const PROFILE: ProfileModel = {
       date_from: '2013-09-01',
       date_to: '2019-07-01',
     }
+  ],
+  projects: [
+    {
+      name: 'Angular Portfolio',
+      organization: 'Developed with Angular 16',
+      link: 'https://github.com/endermejia/angular-portfolio',
+      img: '../../../assets/angular.webp',
+      paragraphs: [
+        'This is my personal portfolio 😊'
+      ]
+    },
+    {
+      name: 'Dark Artist Portfolio',
+      organization: 'Developed with Angular 16',
+      link: 'https://github.com/endermejia/dark-artist-portfolio',
+      img: '../../../assets/angular.webp',
+      paragraphs: [
+        'This is a project template for a tattoo artist.'
+      ]
+    },
+    {
+      name: 'Club Escalada Costa Blanca',
+      organization: 'Developed with Angular 13',
+      link: 'https://github.com/endermejia/dark-artist-portfolio',
+      img: '../../../assets/angular.webp',
+      paragraphs: [
+        'This is a project for the Club Escalada Costa Blanca.',
+        'Visit the website: <a href="https://www.clubescaladacostablanca.com/" target="_blank" class="text-gradient">Club Escalada Costa Blanca</a>'
+      ]
+    },
+    {
+      name: 'GoogleSheets API',
+      organization: 'Developed with Node.js',
+      link: 'https://github.com/endermejia/googlesheets-api',
+      img: '../../../assets/nodejs.webp',
+      paragraphs: [
+        'API developed with Node.js for the control of a GoogleSheet'
+      ]
+    }
+
+
   ]
 };
 

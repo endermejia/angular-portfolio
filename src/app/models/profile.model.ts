@@ -9,7 +9,6 @@ export interface ProfileDescriptionModel {
 export interface ProfileModel {
   description?: ProfileDescriptionModel;
   name: string;
-  skills?: ItemModel[];
   experience?: ItemModel[];
   education?: ItemModel[];
   projects?: ItemModel[];

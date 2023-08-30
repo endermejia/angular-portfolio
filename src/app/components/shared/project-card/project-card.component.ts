@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {ItemModel} from '../../../models/item.model';
+import {PROFILE} from "../../../mocks/global-info";
 
 @Component({
   selector: 'app-project-card',
@@ -7,4 +9,7 @@ import { Component } from '@angular/core';
 })
 export class ProjectCardComponent {
 
+  @Input() public item: ItemModel;
+
+  protected readonly PROFILE = PROFILE;
 }

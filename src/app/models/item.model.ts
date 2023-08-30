@@ -6,4 +6,5 @@ export interface ItemModel {
   place?: string;
   date_from?: string;
   date_to?: string;
+  paragraphs?: string[];
 }
