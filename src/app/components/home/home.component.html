@@ -16,15 +16,13 @@
             </b></h1>
             <h3><b>I'm a {{profile.description.title}}.</b></h3>
           </div>
-
-
           <p *ngFor="let paragraph of profile.description.paragraphs"
              [innerHTML]="paragraph">
           </p>
         </div>
       </div>
     </div>
-    <div class="d-lg-flex mt-lg-5">
+    <div class="d-lg-flex mt-5">
       <div class="col-lg-6 ps-lg-2">
         <div *ngIf="profile.description.show">
           <div class="mb-lg-5 mb-3">

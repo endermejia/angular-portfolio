@@ -1,7 +1,6 @@
 <ng-container *ngIf="item?.name">
-  <div class="d-lg-flex mt-lg-5">
-    <div class="col-3 pe-2">
-
+  <div class="d-flex mt-5">
+    <div class="col-3 me-3">
       <a [href]="item.link"
          [title]="item.organization"
          target="_blank">
@@ -19,6 +18,9 @@
         <span *ngIf="item.date_from && item.date_to">-</span>
         {{item.date_to === today ? 'Present' : (item.date_to | date: 'MMM yyyy')}}
       </h6>
+      <p *ngFor="let paragraph of item.paragraphs"
+         [innerHTML]="paragraph">
+      </p>
     </div>
   </div>
 </ng-container>
