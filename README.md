@@ -1,6 +1,11 @@
-# FrontendCV
+# Angular Portfolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
+Angular Portfolio for a Frontend Developer developed with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.2.
+
+<strong>View [Live Demo](https://gabriel-mejia.com/#/home) </strong>
+
+
+<img width="1529" alt="Angular Portfilio" src="src/assets/portfolio.webp">
 
 ## Development server
 
