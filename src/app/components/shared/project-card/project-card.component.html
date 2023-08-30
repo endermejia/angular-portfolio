@@ -1,28 +1,32 @@
 <ng-container *ngIf="item?.name">
-  <div class="d-flex mt-5">
-    <div class="col-3 me-3">
-      <a [href]="item.link"
-         [title]="item.name"
-         target="_blank">
-        <img *ngIf="item.img"
-             [src]="item.img"
-             width="100"
-             [alt]="item.name">
-      </a>
-    </div>
-    <div class="col-9 pe-2">
-      <h3><b>{{item.name}}</b></h3>
-      <h5>{{item.organization}}</h5>
-      <p *ngFor="let paragraph of item.paragraphs"
-         [innerHTML]="paragraph">
-      </p>
-      <p>
-        View the
+  <div class="row mt-5">
+    <div class="col-2 col-lg-3">
+      <div class="mx-3 center-div">
         <a [href]="item.link"
            [title]="item.name"
-           class="text-gradient"
-           target="_blank">full article</a>.
-      </p>
+           target="_blank">
+          <img *ngIf="item.img"
+               [src]="item.img"
+               width="100"
+               [alt]="item.name">
+        </a>
+      </div>
+    </div>
+    <div class="col-10 col-lg-9">
+      <div class="mx-3">
+        <h3><b>{{item.name}}</b></h3>
+        <h5>{{item.organization}}</h5>
+        <p *ngFor="let paragraph of item.paragraphs"
+           [innerHTML]="paragraph">
+        </p>
+        <p>
+          View the
+          <a [href]="item.link"
+             [title]="item.name"
+             class="text-gradient"
+             target="_blank">full article</a>.
+        </p>
+      </div>
     </div>
   </div>
 </ng-container>

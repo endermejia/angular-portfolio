@@ -1,26 +1,30 @@
 <ng-container *ngIf="item?.name">
-  <div class="d-flex mt-5">
-    <div class="col-3 me-3">
-      <a [href]="item.link"
-         [title]="item.organization"
-         target="_blank">
-        <img *ngIf="item.img"
-             [src]="item.img"
-             width="100"
-             [alt]="item.organization">
-      </a>
+  <div class="row mt-5">
+    <div class="col-3">
+      <div class="mx-3 center-div">
+        <a [href]="item.link"
+           [title]="item.organization"
+           target="_blank">
+          <img *ngIf="item.img"
+               [src]="item.img"
+               width="100"
+               [alt]="item.organization">
+        </a>
+      </div>
     </div>
-    <div class="col-9 pe-2">
-      <h3><b>{{item.name}}</b></h3>
-      <h5>{{item.organization}}</h5>
-      <h6>
-        {{item.date_from | date: 'MMM yyyy'}}
-        <span *ngIf="item.date_from && item.date_to">-</span>
-        {{item.date_to === today ? 'Present' : (item.date_to | date: 'MMM yyyy')}}
-      </h6>
-      <p *ngFor="let paragraph of item.paragraphs"
-         [innerHTML]="paragraph">
-      </p>
+    <div class="col-9">
+      <div class="mx-3">
+        <h3><b>{{item.name}}</b></h3>
+        <h5>{{item.organization}}</h5>
+        <h6>
+          {{item.date_from | date: 'MMM yyyy'}}
+          <span *ngIf="item.date_from && item.date_to">-</span>
+          {{item.date_to === today ? 'Present' : (item.date_to | date: 'MMM yyyy')}}
+        </h6>
+        <p *ngFor="let paragraph of item.paragraphs"
+           [innerHTML]="paragraph">
+        </p>
+      </div>
     </div>
   </div>
 </ng-container>

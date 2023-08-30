@@ -1,13 +1,13 @@
 <section class="main-section">
   <article>
-    <div class="d-lg-flex mt-lg-5">
-      <div class="col-lg-6 pe-lg-2">
-        <div id="profile-img">
+    <div class="row mt-lg-5">
+      <div class="col-lg-6">
+        <div id="profile-img" class="pe-lg-2">
           <img src="../../../assets/profile.webp" alt="profile_img">
         </div>
       </div>
-      <div class="col-lg-6 ps-lg-2 center-div">
-        <div *ngIf="profile.description.show">
+      <div class="col-lg-6 align-div">
+        <div class="ps-lg-2" *ngIf="profile.description.show">
           <div class="mb-lg-5 mb-3">
             <h1><b>
               Hi, I'm
@@ -22,9 +22,9 @@
         </div>
       </div>
     </div>
-    <div class="d-lg-flex mt-5">
-      <div class="col-lg-6 ps-lg-2">
-        <div *ngIf="profile.description.show">
+    <div class="row mt-5">
+      <div class="col-lg-6">
+        <div class="ps-lg-2" *ngIf="profile.description.show">
           <div class="mb-lg-5 mb-3">
             <h1><b>
               <span class="text-primary text-gradient">Experience</span>
@@ -37,8 +37,8 @@
           </ng-container>
         </div>
       </div>
-      <div class="col-lg-6 ps-lg-2">
-        <div *ngIf="profile.description.show">
+      <div class="col-lg-6">
+        <div class="ps-lg-2" *ngIf="profile.description.show">
           <div class="mb-lg-5 mb-3">
             <h1><b>
               <span class="text-primary text-gradient">Education & Awards</span>

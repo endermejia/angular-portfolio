@@ -77,7 +77,7 @@ export const PROFILE: ProfileModel = {
     },
     {
       name: 'Dark Artist Portfolio',
-      organization: 'Developed with Angular 16',
+      organization: 'Developed with Angular 9',
       link: 'https://github.com/endermejia/dark-artist-portfolio',
       img: '../../../assets/angular.webp',
       paragraphs: [

@@ -33,26 +33,30 @@
               [placeholder]="contactForm.namePlaceholder"
               required>
           </div>
-          <div class="d-lg-flex">
-            <div class="col-lg-6 pe-lg-2">
-              <label for="inputEmail">{{contactForm.email}}</label>
-              <input
-                id="inputEmail"
-                class="form-control"
-                type="email"
-                [name]="contactForm.email"
-                [placeholder]="contactForm.emailPlaceholder"
-                required>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="pe-lg-2">
+                <label for="inputEmail">{{contactForm.email}}</label>
+                <input
+                  id="inputEmail"
+                  class="form-control"
+                  type="email"
+                  [name]="contactForm.email"
+                  [placeholder]="contactForm.emailPlaceholder"
+                  required>
+              </div>
             </div>
-            <div class="col-lg-6 ps-lg-2">
-              <label for="inputTelephone">{{contactForm.phone}}</label>
-              <input
-                id="inputTelephone"
-                class="form-control"
-                type="tel"
-                [name]="contactForm.phone"
-                [placeholder]="contactForm.phonePlaceholder"
-                required>
+            <div class="col-lg-6">
+              <div class="ps-lg-2">
+                <label for="inputTelephone">{{contactForm.phone}}</label>
+                <input
+                  id="inputTelephone"
+                  class="form-control"
+                  type="tel"
+                  [name]="contactForm.phone"
+                  [placeholder]="contactForm.phonePlaceholder"
+                  required>
+              </div>
             </div>
           </div>
           <div class="col-lg-12">
